@@ -176,12 +176,6 @@ main {
     text-align: center;
 }
 
-.player-head {
-}
-
-.player-head h2 {
-}
-
 .plus1-click, .plus2-click, .plus3-click {
     background-color: #000;
     border-radius: 5px 5px 0 0;
