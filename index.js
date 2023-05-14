@@ -92,3 +92,9 @@ console.log(buttons)
         sum3.innerText = 0
     }
   }
+
+  document.querySelector(".send-button",).addEventListener("click", () => {
+    totalClick1(0)
+    totalClick2(0)
+    totalClick3(0)
+  })
