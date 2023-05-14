@@ -148,11 +148,6 @@ main {
     padding-bottom: 200px;
 }
 
-.players h2 {
-    color: #fff;
-    text-transform: uppercase;
-}
-
 .player1, .player2, .player3 {
     align-items: center;
     background-color: #000;
@@ -163,6 +158,12 @@ main {
     flex-direction: column;
     justify-content: center;
     padding: 10px;
+}
+
+.player-head {
+    align-items: center;
+    display: flex;
+    justify-content: center;
 }
 
 .extra {
