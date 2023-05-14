@@ -2,6 +2,129 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    background: #000;
+}
+
+header {
+    background-color: #6958ca;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.navbar {
+    min-height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 0 34px;
+    position: relative;
+}
+
+.logo {
+    position: absolute;
+    left: 1%;
+    top: 5%;
+}
+
+.logo svg {
+    fill: #fff;
+    height: 60px;
+    width: 60px;
+    transition: 3s ease;
+}
+
+.logo svg:hover {
+    fill: #6958ca;
+    background-color: #000;
+    border-radius: 50px;
+    padding: 5px;
+    transition: 1s ease;
+}
+
+.navbar-menu {
+    align-items: center;
+    display: flex;
+    justify-content: flex-end;
+    gap: 60px;
+}
+
+.navbar-link {
     color: #fff;
+    transition: 0.5s ease;
+}
+
+.navbar-link:hover {
+    color: #ade01f;
+}
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+.bar {
+    display: block;
+    width: 28px;
+    height: 3px;
+    margin: 5px auto;
+    background: #fff;
+    transition: all 0.3s ease-in-out;
+}
+
+.navbar-button {
+    --button-color: #fff;
+    background-color: transparent;
+    border: transparent;
+    overflow: hidden;
+  }
+  
+  .navbar-button .hamburger {
+    transition: translate 0.5s, rotate 0.5s;
+  }
+  
+  .navbar-button[aria-expanded="true"] .hamburger {
+    translate: 3px -3px;
+    rotate: 0.125turn;
+  }
+  
+  .navbar-button .line {
+    transition: 0.5s;
+    stroke-dasharray: 60 31 60 300;
+  }
+  
+  .navbar-button[aria-expanded="true"] .line {
+    stroke-dasharray: 60 105 60 300;
+    stroke-dashoffset: -90;
+  }
+
+@media (max-width: 768px) {
+    .hamburger {
+        display: block;
+    }
+    .navbar-menu {
+        position: fixed;
+        left: 100%;
+        top: 70px;
+        gap: 0;
+        background-color: #6958ca;
+        text-align: center;
+        transition: 0.5s ease;
+        flex-direction: column;
+        width: 100%;
+        transform: 0.3s;
+    }
+    .navbar-item {
+        margin: 16px 0;
+    }
+    .navbar-menu.active {
+        left: 0;
+    }
+    .logo {
+        left: 5%;
+    }
 }
