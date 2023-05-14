@@ -46,13 +46,9 @@ console.log(buttons)
     totalClick3(5)
   })
 
-  document.querySelector(".reset1-click").addEventListener("click", () => {
+  document.querySelector(".send-button",).addEventListener("click", () => {
     totalClick1(0)
-  })
-  document.querySelector(".reset2-click").addEventListener("click", () => {
     totalClick2(0)
-  })
-  document.querySelector(".reset3-click").addEventListener("click", () => {
     totalClick3(0)
   })
 
@@ -92,9 +88,3 @@ console.log(buttons)
         sum3.innerText = 0
     }
   }
-
-  document.querySelector(".send-button",).addEventListener("click", () => {
-    totalClick1(0)
-    totalClick2(0)
-    totalClick3(0)
-  })
