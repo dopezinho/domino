@@ -35,21 +35,6 @@ a {
     top: 5%;
 }
 
-.logo svg {
-    fill: #fff;
-    height: 60px;
-    width: 60px;
-    transition: 3s ease;
-}
-
-.logo svg:hover {
-    fill: #000;
-    background-color: #fff;
-    border-radius: 50px;
-    padding: 5px;
-    transition: 1s ease;
-}
-
 .navbar-menu {
     align-items: center;
     display: flex;
@@ -194,13 +179,6 @@ header svg {
     height: 50px;
 }
 
-.cls-4 {
-    fill: #fff;
-    stroke: red;
-    stroke-miterlimit: 10;
-    stroke-width: 5px;
-  }
-
 footer {
     background-color: #000;
     display: flex;
@@ -243,3 +221,23 @@ footer svg:hover .cls-3 {
   .cls-3 {
     stroke: #fff;
   }
+
+  .cls-4 {
+    fill: #fff;
+    stroke: #fff;
+    stroke-width: 3px;
+    }
+  .cls-5 {
+    fill: #fff;
+    stroke: #fff;
+    stroke-width: 3px;
+    }
+  .cls-6 {
+    fill: #fff;
+    stroke: #fff;
+    stroke-width: 3px;
+    }
+
+    .dmn-logo {
+        height: 70px;
+    }
