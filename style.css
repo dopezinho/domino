@@ -186,6 +186,18 @@ body::selection {
     -webkit-tap-highlight-color: transparent;
 }
 
+header img {
+    height: 50px;
+}
+
+header svg {
+    height: 50px;
+}
+
+.cls-4 {
+    fill: #fff;
+  }
+
 footer {
     background-color: #000;
     display: flex;
