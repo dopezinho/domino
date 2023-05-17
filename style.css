@@ -198,6 +198,23 @@ footer img {
     rotate: 180deg;
 }
 
+footer img:hover {
+    background-color: red;
+}
+
+footer svg:hover .cls-1 {
+    fill: green;
+    stroke: green;
+}
+footer svg:hover .cls-2 {
+    fill: red;
+    stroke: red;
+}
+footer svg:hover .cls-3 {
+    fill: blue;
+    stroke: blue;
+}
+
 .cls-1 {
     fill: #fff;
     stroke: #fff;
