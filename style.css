@@ -196,6 +196,9 @@ header svg {
 
 .cls-4 {
     fill: #fff;
+    stroke: red;
+    stroke-miterlimit: 10;
+    stroke-width: 5px;
   }
 
 footer {
