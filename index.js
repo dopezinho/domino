@@ -89,6 +89,11 @@ const buttons = document.querySelector("#hamb-button");
 
     const x1 = document.getElementById("x1")
 
+    const v1 = document.getElementById("v1")
+    const v2 = document.getElementById("v2")
+    const v3 = document.getElementById("v3")
+    const v4 = document.getElementById("v4")
+
     if(sumValue1 < 0) {
         sum1.innerText = 0
     }
@@ -125,6 +130,7 @@ const buttons = document.querySelector("#hamb-button");
     }
     if (sumValue1 >= 50) {
       a9.style.stroke = "#fff"
+      v1.style.stroke = "#fff"
     }
 
     if (sumValue1 >= 55) {
@@ -156,6 +162,7 @@ const buttons = document.querySelector("#hamb-button");
     }
     if (sumValue1 >= 100) {
       b9.style.stroke = "#fff"
+      v2.style.stroke = "#fff"
     }
     if (sumValue1 >= 105) {
       c0.style.stroke = "#fff"
@@ -186,6 +193,7 @@ const buttons = document.querySelector("#hamb-button");
     }
     if (sumValue1 >= 150) {
       c9.style.stroke = "#fff"
+      v3.style.stroke = "#fff"
     }
 
     if (sumValue1 >= 155) {
@@ -217,6 +225,7 @@ const buttons = document.querySelector("#hamb-button");
     }
     if (sumValue1 >= 200) {
       d9.style.stroke = "#fff"
+      v4.style.stroke = "#fff"
       x1.style.stroke = "#00ff2a"
     }
   }
