@@ -9,7 +9,7 @@
 header {
     background-color: #000;
     border: 1px solid #fff;
-    min-height: 8vh;
+    min-height: 15vh;
 }
 
 li {
@@ -33,21 +33,6 @@ a {
     position: absolute;
     left: 1%;
     top: 5%;
-}
-
-.logo svg {
-    fill: #fff;
-    height: 60px;
-    width: 60px;
-    transition: 3s ease;
-}
-
-.logo svg:hover {
-    fill: #000;
-    background-color: #fff;
-    border-radius: 50px;
-    padding: 5px;
-    transition: 1s ease;
 }
 
 .navbar-menu {
@@ -137,52 +122,15 @@ a {
 
 main {
     background-color: #000;
+    color: #fff;
 }
-
-.container-img {
-    align-items: center;
-    display: flex;
-    justify-content: center;
-}
-
-.container-img img {
-    height: 150px;
-}
-
-/* Players */
 
 .players {
-    align-items: center;
     display: flex;
     justify-content: space-around;
-    padding-bottom: 50px;
 }
 
-.container1, .container2, .container3 {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    min-width: 30%;
-}
-
-.player1, .player2, .player3 {
-    align-items: center;
-    background-color: #000;
-    border: 1px solid #201d1d;
-    color: #fff;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-}
-
-.player-head {
-}
-
-.player-head h2 {
-}
-
-.plus1-click, .plus2-click, .plus3-click {
+.plus1-click-5, .plus1-click-10, .plus1-click-20 {
     background-color: #000;
     border-radius: 5px 5px 0 0;
     color: #fff;
@@ -201,64 +149,6 @@ main {
     font-size: 2rem;
 }
 
-.reset1-click, .reset2-click, .reset3-click {
-    background-color: #000;
-    color: #fff;
-    cursor: pointer;
-    margin-top: 50px;
-    padding: 10px 15px;
-    text-transform: uppercase;
-}
-
-.extra {
-    align-items: flex-end;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-}
-
-.extra button {
-    background-color: #2d2d2d;
-    border-radius: 5px;
-    color: #fff;
-    cursor: pointer;
-    font-size: 1.5rem;
-    margin-bottom: 20px;
-    margin-right: 10px;
-    min-height: 60px;
-    min-width: 60px;
-}
-
-.total {
-    align-items: center;
-    color: #fff;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.total h2 {    
-    border: 1px solid #fff;
-    text-align: center;
-    width: 100%;
-}
-
-.total-players {
-    align-items: center;
-    display: flex;
-    justify-content: space-around;
-    width: 100%;
-}
-
-.send-button {
-    background-color: #2d2d2d;
-    color: #fff;
-    cursor: pointer;
-    padding: 10px 0;
-    width: 100%;
-}
-
-
 /*  Footer  */
 
 footer {
@@ -268,7 +158,7 @@ footer {
     color: #fff;
     display: flex;
     justify-content: center;
-    min-height: 12vh;
+    min-height: 65vh;
     text-transform: uppercase;
 }
 
@@ -279,3 +169,84 @@ body::selection {
     user-select: none;
     -webkit-tap-highlight-color: transparent;
 }
+
+footer {
+    background-color: #000;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+footer img:hover {
+    background-color: red;
+}
+
+footer svg:hover .cls-1 {
+    fill: green;
+    stroke: green;
+}
+footer svg:hover .cls-2 {
+    fill: red;
+    stroke: red;
+}
+footer svg:hover .cls-3 {
+    fill: blue;
+    stroke: blue;
+}
+
+.cls-1 {
+    fill: #fff;
+    stroke: #fff;
+  }
+
+  .cls-2 {
+    fill: #fff;
+    stroke: #fff;
+  }
+
+  .cls-3 {
+    stroke: #fff;
+  }
+
+  .cls-4 {
+    fill: #fff;
+    stroke: #fff;
+    stroke-width: 3px;
+    }
+  .cls-5 {
+    fill: #fff;
+    stroke: #fff;
+    stroke-width: 3px;
+    }
+  .cls-6 {
+    fill: #fff;
+    stroke: #fff;
+    stroke-width: 3px;
+    }
+
+    .dmn-logo {
+        height: 70px;
+    }
+
+    main svg {
+        height: 500px;
+    }
+
+    .cls-7 {
+        fill: #fff;
+        stroke: #fff;
+      }
+    .cls-8 {
+        fill: #fff;
+        stroke: #fff;
+      }
+    .cls-9 {
+        fill: #fff;
+        stroke: #fff;
+      }
+    .cls-10 {
+        stroke: transparent;
+      }
+    .cls-11 {
+        stroke: transparent;
+    }
