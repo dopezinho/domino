@@ -130,7 +130,7 @@ main {
     justify-content: space-around;
 }
 
-.plus1-click, .plus2-click, .plus3-click {
+.plus1-click-5, .plus1-click-10, .plus1-click-20 {
     background-color: #000;
     border-radius: 5px 5px 0 0;
     color: #fff;

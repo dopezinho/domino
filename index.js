@@ -29,8 +29,14 @@ const buttons = document.querySelector("#hamb-button");
     totalClick1(-5)
   })
 
-  document.querySelector(".plus1-click").addEventListener("click", () => {
+  document.querySelector(".plus1-click-5").addEventListener("click", () => {
     totalClick1(5)   
+  })
+  document.querySelector(".plus1-click-10").addEventListener("click", () => {
+    totalClick1(10)   
+  })
+  document.querySelector(".plus1-click-20").addEventListener("click", () => {
+    totalClick1(20)   
   })
 
   function totalClick1(click) {
@@ -211,6 +217,6 @@ const buttons = document.querySelector("#hamb-button");
     }
     if (sumValue1 >= 200) {
       d9.style.stroke = "#fff"
-      x1.style.stroke = "#48cbe2"
+      x1.style.stroke = "#00ff2a"
     }
   }
