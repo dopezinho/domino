@@ -38,6 +38,21 @@ const buttons = document.querySelector("#hamb-button");
   document.querySelector(".plus1-click-20").addEventListener("click", () => {
     totalClick1(20)   
   })
+  
+  function clicking() {
+    const scoreBorder = document.getElementById("x1")
+    const scorePoints = document.querySelectorAll(".cls-10")
+    
+        for (i = 1; i <= sumValue1/5; i++) {
+            scoreBorder[i-1].style.stroke = "#fff"
+            if (sumValue1 % 50 === 0) {
+                scorePoints[i/10-1].style.stroke = "#fff"
+            }
+            if (sumValue1 === 200) {
+                scoreBorder.style.stroke = "#00ff2a"
+            }
+        }
+    }
 
   function totalClick1(click) {
     const sum1 = document.getElementById('totalClicks1')
@@ -135,4 +150,5 @@ const buttons = document.querySelector("#hamb-button");
       if(click === 0) {
           sum1.innerText = 0
       }  
+      clicking()
   }
