@@ -92,9 +92,6 @@ const buttons = document.querySelector("#hamb-button");
     if(sumValue1 < 0) {
         sum1.innerText = 0
     }
-    if(sumValue1 > 200) {
-        sum1.innerText = 200
-    }
     if(click === 0) {
         sum1.innerText = 0
     }
