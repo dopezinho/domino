@@ -98,3 +98,4 @@ console.log(buttons)
     totalClick2(0)
     totalClick3(0)
   })
+
