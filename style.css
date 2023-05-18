@@ -4,73 +4,10 @@
     padding: 0;
 }
 
-/*  Header  */
-
-header {
-    background-color: #000;
-    border: 1px solid #fff;
-}
-
-li {
-    list-style: none;
-}
-
-a {
-    text-decoration: none;
-}
-
-.navbar {
-    min-height: 80px;
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    padding-right: 34px;
-    position: relative;
-}
-
-.navbar-menu {
-    align-items: center;
-    display: flex;
-    justify-content: flex-end;
-    gap: 60px;
-}
-
-.navbar-link {
-    color: #fff;
-}
-
-  /*  Header logo  */
-
-.logo {
-    position: absolute;
-    left: 2%;
-    top: 20%;
-}
-  
-.dmn-logo {
-      height: 50px;
-}
-.cls-4 {
-  fill: #fff;
-  stroke: #fff;
-  stroke-width: 3px;
-}
-.cls-5 {
-  fill: #fff;
-  stroke: #fff;
-  stroke-width: 3px;
-}
-.cls-6 {
-  fill: #fff;
-  stroke: #fff;
-  stroke-width: 3px;
-}
-
-/*  Main  */
-
 main {
     background-color: #000;
     color: #fff;
+    min-height: 100vh;
 }
 
 .plus1-click-5, .plus1-click-10, .plus1-click-20 {
@@ -89,7 +26,8 @@ main {
 }
 
 #totalClicks1 {
-    font-size: 2rem;
+    font-size: 2.5rem;
+    padding: 0 40px;
 }
 
 /*  Contagem de pontos  */
@@ -114,12 +52,4 @@ main svg {
     }
 .cls-11 {
     stroke: transparent;
-}
-
-/*  Webkit  */
-
-body,
-body::selection {  
-    user-select: none;
-    -webkit-tap-highlight-color: transparent;
 }
