@@ -27,7 +27,7 @@
   let totalPoints2 = 0;
   let totalPoints3 = 0;
 
-
+  //Functions to keep track off points by buttons
   function add5_1() {
     totalPoints1 += 5;
     showPoints_1();
@@ -88,7 +88,7 @@
     showPoints_3();
   }
 
-  
+  //Functions to show the ticks
   function showPoints_1() {
     let numCircles = 0
     if (totalPoints1 <= 400 && totalPoints1 >= 0){
