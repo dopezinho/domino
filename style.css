@@ -12,14 +12,14 @@ main {
     min-height: 100vh;
 }
 
-.plus1-click-5, .plus1-click-10, .plus1-click-20 {
+.plus1-click-5, .plus1-click-10, .plus1-click-20, .plus2-click-5, .plus2-click-10, .plus2-click-20, .plus3-click-5, .plus3-click-10, .plus3-click-20{
     background-color: #000;
     color: #fff;
     cursor: pointer;
     font-size: 2.5rem;
     min-width: 100px
 }
-.minus1-click {
+.minus1-click, .minus2-click, .minus3-click {
     background-color: #000;
     color: #fff;
     cursor: pointer;
@@ -27,7 +27,7 @@ main {
     min-width: 100px
 }
 
-#totalClicks1 {
+#totalClicks1, #totalClicks2, #totalClicks3 {
     font-size: 2.5rem;
     padding: 0 40px;
 }
