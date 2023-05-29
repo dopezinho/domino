@@ -1,4 +1,4 @@
-  // Consts
+  //Consts
   const minusClick_1 = document.querySelector(".minus1-click");
   const plusClick5_1 = document.querySelector(".plus1-click-5");
   const plusClick10_1 = document.querySelector(".plus1-click-10");
