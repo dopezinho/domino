@@ -53,3 +53,7 @@ main svg {
 .cls-11 {
     stroke: transparent;
 }
+
+.ticked {
+    stroke: #fff;
+}
