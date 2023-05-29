@@ -1,30 +1,3 @@
-//  Navbar
-
-const hamburger = document.querySelector('.hamburger')
-const navbarMenu = document.querySelector('.navbar-menu')
-
-hamburger.addEventListener('click', () => {
-    hamburger.classList.toggle('active')
-    navbarMenu.classList.toggle('active')
-})
-
-const buttons = document.querySelector("#hamb-button");
-
-
-  buttons.addEventListener("click", () => {
-    const currentState = buttons.getAttribute("data-state");
-
-    if (!currentState || currentState === "closed") {
-      buttons.setAttribute("data-state", "opened");
-      buttons.setAttribute("aria-expanded", "true");
-    } else {
-      buttons.setAttribute("data-state", "closed");
-      buttons.setAttribute("aria-expanded", "false");
-    }
-  });
-
-  //  Increment and Decrement buttons
-
   document.querySelector(".minus1-click",).addEventListener("click", () => {
     totalClick1(-5)
   })
@@ -38,196 +11,119 @@ const buttons = document.querySelector("#hamb-button");
   document.querySelector(".plus1-click-20").addEventListener("click", () => {
     totalClick1(20)   
   })
+  
+  function clicking() {
+    const scoreBorder = document.getElementById("x1")
+    const scorePoints = document.querySelectorAll(".cls-10")
+    
+        for (i = 1; i <= sumValue1/5; i++) {
+            scoreBorder[i-1].style.stroke = "#fff"
+            if (sumValue1 % 50 === 0) {
+                scorePoints[i/10-1].style.stroke = "#fff"
+            }
+            if (sumValue1 === 200) {
+                scoreBorder.style.stroke = "#00ff2a"
+            }
+        }
+    }
 
   function totalClick1(click) {
     const sum1 = document.getElementById('totalClicks1')
     const sumValue1 = parseInt(sum1.innerText) + click
     sum1.innerText = sumValue1
-    const a0 = document.getElementById("a0")
-    const a1 = document.getElementById("a1")
-    const a2 = document.getElementById("a2")
-    const a3 = document.getElementById("a3")
-    const a4 = document.getElementById("a4")
-    const a5 = document.getElementById("a5")
-    const a6 = document.getElementById("a6")
-    const a7 = document.getElementById("a7")
-    const a8 = document.getElementById("a8")
-    const a9 = document.getElementById("a9")
 
-    const b0 = document.getElementById("b0")
-    const b1 = document.getElementById("b1")
-    const b2 = document.getElementById("b2")
-    const b3 = document.getElementById("b3")
-    const b4 = document.getElementById("b4")
-    const b5 = document.getElementById("b5")
-    const b6 = document.getElementById("b6")
-    const b7 = document.getElementById("b7")
-    const b8 = document.getElementById("b8")
-    const b9 = document.getElementById("b9")
+    const drawedPoints = document.querySelectorAll('.cls-10')
 
-    const c0 = document.getElementById("c0")
-    const c1 = document.getElementById("c1")
-    const c2 = document.getElementById("c2")
-    const c3 = document.getElementById("c3")
-    const c4 = document.getElementById("c4")
-    const c5 = document.getElementById("c5")
-    const c6 = document.getElementById("c6")
-    const c7 = document.getElementById("c7")
-    const c8 = document.getElementById("c8")
-    const c9 = document.getElementById("c9")
+      switch(sumValue1) {
+        case 5: drawedPoints[0].style.stroke = "#fff"
+        break;
+        case 10: drawedPoints[1].style.stroke = "#fff"
+        break;
+        case 15: drawedPoints[2].style.stroke = "#fff"
+        break;
+        case 20: drawedPoints[3].style.stroke = "#fff"
+        break;
+        case 25: drawedPoints[4].style.stroke = "#fff"
+        break;
+        case 30: drawedPoints[5].style.stroke = "#fff"
+        break;
+        case 35: drawedPoints[6].style.stroke = "#fff"
+        break;
+        case 40: drawedPoints[7].style.stroke = "#fff"
+        break;
+        case 45: drawedPoints[8].style.stroke = "#fff"
+        break;
+        case 50: drawedPoints[9].style.stroke = "#fff"
+        break;
+        case 55: drawedPoints[10].style.stroke = "#fff"
+        break;
+        case 60: drawedPoints[11].style.stroke = "#fff"
+        break;
+        case 65: drawedPoints[12].style.stroke = "#fff"
+        break;
+        case 70: drawedPoints[13].style.stroke = "#fff"
+        break;
+        case 75: drawedPoints[14].style.stroke = "#fff"
+        break;
+        case 80: drawedPoints[15].style.stroke = "#fff"
+        break;
+        case 85: drawedPoints[16].style.stroke = "#fff"
+        break;
+        case 90: drawedPoints[17].style.stroke = "#fff"
+        break;
+        case 95: drawedPoints[18].style.stroke = "#fff"
+        break;
+        case 100: drawedPoints[19].style.stroke = "#fff"
+        break;
+        case 105: drawedPoints[20].style.stroke = "#fff"
+        break;
+        case 110: drawedPoints[21].style.stroke = "#fff"
+        break;
+        case 115: drawedPoints[22].style.stroke = "#fff"
+        break;
+        case 120: drawedPoints[23].style.stroke = "#fff"
+        break;
+        case 125: drawedPoints[24].style.stroke = "#fff"
+        break;
+        case 130: drawedPoints[25].style.stroke = "#fff"
+        break;
+        case 135: drawedPoints[26].style.stroke = "#fff"
+        break;
+        case 140: drawedPoints[27].style.stroke = "#fff"
+        break;
+        case 145: drawedPoints[28].style.stroke = "#fff"
+        break;
+        case 150: drawedPoints[29].style.stroke = "#fff"
+        break;
+        case 155: drawedPoints[30].style.stroke = "#fff"
+        break;
+        case 160: drawedPoints[31].style.stroke = "#fff"
+        break;
+        case 165: drawedPoints[32].style.stroke = "#fff"
+        break;
+        case 170: drawedPoints[33].style.stroke = "#fff"
+        break;
+        case 175: drawedPoints[34].style.stroke = "#fff"
+        break;
+        case 180: drawedPoints[35].style.stroke = "#fff"
+        break;
+        case 185: drawedPoints[36].style.stroke = "#fff"
+        break;
+        case 190: drawedPoints[37].style.stroke = "#fff"
+        break;
+        case 195: drawedPoints[38].style.stroke = "#fff"
+        break;
+        case 200: drawedPoints[39].style.stroke = "#fff"
+        break;
+      }
 
-    const d0 = document.getElementById("d0")
-    const d1 = document.getElementById("d1")
-    const d2 = document.getElementById("d2")
-    const d3 = document.getElementById("d3")
-    const d4 = document.getElementById("d4")
-    const d5 = document.getElementById("d5")
-    const d6 = document.getElementById("d6")
-    const d7 = document.getElementById("d7")
-    const d8 = document.getElementById("d8")
-    const d9 = document.getElementById("d9")
-
-    const x1 = document.getElementById("x1")
-
-    const v1 = document.getElementById("v1")
-    const v2 = document.getElementById("v2")
-    const v3 = document.getElementById("v3")
-    const v4 = document.getElementById("v4")
-
-    if(sumValue1 < 0) {
-        sum1.innerText = 0
-    }
-    if(click === 0) {
-        sum1.innerText = 0
-    }
-
-    if (sumValue1 >= 5) {
-      a0.style.stroke = "#fff"
-    }
-    if (sumValue1 >= 10) {
-      a1.style.stroke = "#fff"
-    }
-    if (sumValue1 >= 15) {
-      a2.style.stroke = "#fff"
-    }
-    if (sumValue1 >= 20) {
-      a3.style.stroke = "#fff"
-    }
-    if (sumValue1 >= 25) {
-      a4.style.stroke = "#fff"
-    }
-    if (sumValue1 >= 30) {
-      a5.style.stroke = "#fff"
-    }
-    if (sumValue1 >= 35) {
-      a6.style.stroke = "#fff"
-    }
-    if (sumValue1 >= 40) {
-      a7.style.stroke = "#fff"
-    }
-    if (sumValue1 >= 45) {
-      a8.style.stroke = "#fff"
-    }
-    if (sumValue1 >= 50) {
-      a9.style.stroke = "#fff"
-      v1.style.stroke = "#fff"
-    }
-
-    if (sumValue1 >= 55) {
-      b0.style.stroke = "#fff"
-    }
-    if (sumValue1 >= 60) {
-      b1.style.stroke = "#fff"
-    }
-    if (sumValue1 >= 65) {
-      b2.style.stroke = "#fff"
-    }
-    if (sumValue1 >= 70) {
-      b3.style.stroke = "#fff"
-    }
-    if (sumValue1 >= 75) {
-      b4.style.stroke = "#fff"
-    }
-    if (sumValue1 >= 80) {
-      b5.style.stroke = "#fff"
-    }
-    if (sumValue1 >= 85) {
-      b6.style.stroke = "#fff"
-    }
-    if (sumValue1 >= 90) {
-      b7.style.stroke = "#fff"
-    }
-    if (sumValue1 >= 95) {
-      b8.style.stroke = "#fff"
-    }
-    if (sumValue1 >= 100) {
-      b9.style.stroke = "#fff"
-      v2.style.stroke = "#fff"
-    }
-    if (sumValue1 >= 105) {
-      c0.style.stroke = "#fff"
-    }
-    if (sumValue1 >= 110) {
-      c1.style.stroke = "#fff"
-    }
-    if (sumValue1 >= 115) {
-      c2.style.stroke = "#fff"
-    }
-    if (sumValue1 >= 120) {
-      c3.style.stroke = "#fff"
-    }
-    if (sumValue1 >= 125) {
-      c4.style.stroke = "#fff"
-    }
-    if (sumValue1 >= 130) {
-      c5.style.stroke = "#fff"
-    }
-    if (sumValue1 >= 135) {
-      c6.style.stroke = "#fff"
-    }
-    if (sumValue1 >= 140) {
-      c7.style.stroke = "#fff"
-    }
-    if (sumValue1 >= 145) {
-      c8.style.stroke = "#fff"
-    }
-    if (sumValue1 >= 150) {
-      c9.style.stroke = "#fff"
-      v3.style.stroke = "#fff"
-    }
-
-    if (sumValue1 >= 155) {
-      d0.style.stroke = "#fff"
-    }
-    if (sumValue1 >= 160) {
-      d1.style.stroke = "#fff"
-    }
-    if (sumValue1 >= 165) {
-      d2.style.stroke = "#fff"
-    }
-    if (sumValue1 >= 170) {
-      d3.style.stroke = "#fff"
-    }
-    if (sumValue1 >= 175) {
-      d4.style.stroke = "#fff"
-    }
-    if (sumValue1 >= 180) {
-      d5.style.stroke = "#fff"
-    }
-    if (sumValue1 >= 185) {
-      d6.style.stroke = "#fff"
-    }
-    if (sumValue1 >= 190) {
-      d7.style.stroke = "#fff"
-    }
-    if (sumValue1 >= 195) {
-      d8.style.stroke = "#fff"
-    }
-    if (sumValue1 >= 200) {
-      d9.style.stroke = "#fff"
-      v4.style.stroke = "#fff"
-      x1.style.stroke = "#00ff2a"
-    }
+      if(sumValue1 < 0) {
+          sum1.innerText = 0
+      }
+      if(click === 0) {
+          sum1.innerText = 0
+      }  
+      clicking()
   }
 
   document.querySelector(".send-button",).addEventListener("click", () => {

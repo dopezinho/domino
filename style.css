@@ -4,249 +4,52 @@
     padding: 0;
 }
 
-/*  Header  */
-
-header {
-    background-color: #000;
-    border: 1px solid #fff;
-    min-height: 15vh;
-}
-
-li {
-    list-style: none;
-}
-
-a {
-    text-decoration: none;
-}
-
-.navbar {
-    min-height: 70px;
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    padding: 0 34px;
-    position: relative;
-}
-
-.logo {
-    position: absolute;
-    left: 1%;
-    top: 5%;
-}
-
-.navbar-menu {
-    align-items: center;
-    display: flex;
-    justify-content: flex-end;
-    gap: 60px;
-}
-
-.navbar-link {
-    color: #fff;
-    transition: 0.5s ease;
-}
-
-.navbar-link:hover {
-    color: #ade01f;
-}
-
-.hamburger {
-    display: none;
-    cursor: pointer;
-}
-
-.bar {
-    display: block;
-    width: 28px;
-    height: 3px;
-    margin: 5px auto;
-    background: #fff;
-    transition: all 0.3s ease-in-out;
-}
-
-.navbar-button {
-    --button-color: #fff;
-    background-color: transparent;
-    border: transparent;
-    overflow: hidden;
-  }
-  
-  .navbar-button .hamburger {
-    transition: translate 0.5s, rotate 0.5s;
-  }
-  
-  .navbar-button[aria-expanded="true"] .hamburger {
-    translate: 3px -3px;
-    rotate: 0.125turn;
-  }
-  
-  .navbar-button .line {
-    transition: 0.5s;
-    stroke-dasharray: 60 31 60 300;
-  }
-  
-  .navbar-button[aria-expanded="true"] .line {
-    stroke-dasharray: 60 105 60 300;
-    stroke-dashoffset: -90;
-  }
-
-@media (max-width: 768px) {
-    .hamburger {
-        display: block;
-    }
-    .navbar-menu {
-        position: fixed;
-        left: 100%;
-        top: 80px;
-        gap: 0;
-        background-color: #000;
-        text-align: center;
-        transition: 0.5s ease;
-        flex-direction: column;
-        width: 100%;
-        transform: 0.3s;
-    }
-    .navbar-item {
-        margin: 16px 0;
-    }
-    .navbar-menu.active {
-        left: 0;
-    }
-    .logo {
-        left: 5%;
-    }
-}
-
-/*  Main  */
-
 main {
     background-color: #000;
     color: #fff;
-}
-
-.players {
-    display: flex;
-    justify-content: space-around;
+    min-height: 100vh;
 }
 
 .plus1-click-5, .plus1-click-10, .plus1-click-20 {
     background-color: #000;
-    border-radius: 5px 5px 0 0;
-    color: #fff;
-    cursor: pointer;
-    font-size: 2rem;
-}
-.minus1-click, .minus2-click, .minus3-click {
-    background-color: #000;
-    border-radius: 0 0 5px 5px;
     color: #fff;
     cursor: pointer;
     font-size: 2.5rem;
+    min-width: 100px
 }
-
-#totalClicks1, #totalClicks2, #totalClicks3 {
-    font-size: 2rem;
-}
-
-/*  Footer  */
-
-footer {
-    align-items: center;
+.minus1-click {
     background-color: #000;
-    border: 1px solid #fff;
     color: #fff;
-    display: flex;
-    justify-content: center;
-    min-height: 65vh;
-    text-transform: uppercase;
+    cursor: pointer;
+    font-size: 2.5rem;
+    min-width: 100px
 }
 
-/*  Webkit  */
-
-body,
-body::selection {  
-    user-select: none;
-    -webkit-tap-highlight-color: transparent;
+#totalClicks1 {
+    font-size: 2.5rem;
+    padding: 0 40px;
 }
 
-footer {
-    background-color: #000;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-}
+/*  Contagem de pontos  */
 
-footer img:hover {
-    background-color: red;
+main svg {
+    height: 500px;
 }
-
-footer svg:hover .cls-1 {
-    fill: green;
-    stroke: green;
-}
-footer svg:hover .cls-2 {
-    fill: red;
-    stroke: red;
-}
-footer svg:hover .cls-3 {
-    fill: blue;
-    stroke: blue;
-}
-
-.cls-1 {
+.cls-7 {
     fill: #fff;
     stroke: #fff;
-  }
-
-  .cls-2 {
+    }
+.cls-8 {
     fill: #fff;
     stroke: #fff;
-  }
-
-  .cls-3 {
-    stroke: #fff;
-  }
-
-  .cls-4 {
+    }
+.cls-9 {
     fill: #fff;
     stroke: #fff;
-    stroke-width: 3px;
     }
-  .cls-5 {
-    fill: #fff;
-    stroke: #fff;
-    stroke-width: 3px;
+.cls-10 {
+    stroke: transparent;
     }
-  .cls-6 {
-    fill: #fff;
-    stroke: #fff;
-    stroke-width: 3px;
-    }
-
-    .dmn-logo {
-        height: 70px;
-    }
-
-    main svg {
-        height: 500px;
-    }
-
-    .cls-7 {
-        fill: #fff;
-        stroke: #fff;
-      }
-    .cls-8 {
-        fill: #fff;
-        stroke: #fff;
-      }
-    .cls-9 {
-        fill: #fff;
-        stroke: #fff;
-      }
-    .cls-10 {
-        stroke: transparent;
-      }
-    .cls-11 {
-        stroke: transparent;
-    }
+.cls-11 {
+    stroke: transparent;
+}
