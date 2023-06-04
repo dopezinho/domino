@@ -78,6 +78,7 @@ main svg {
     align-items: center;
     display: flex;
     flex-direction: column;
+    gap: 2vh;
 }
 
 .playerName {
@@ -89,6 +90,12 @@ main svg {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+/*  Buttons  */
+
+button {
+    gap: 0 50px;
 }
 
 /* Styles for the modal */
@@ -130,4 +137,11 @@ main svg {
 .modalOptions > li{
     cursor: pointer;
     list-style-type: none;
+}
+
+/*  Webkit  */
+body,
+body::selection {  
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
 }
