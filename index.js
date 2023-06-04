@@ -35,6 +35,16 @@
     showPoints(ticks, circles, playerPoints);
   }
 
+  function galada(element) {
+    const player = element.parentNode;
+    console.log(player);
+    const ticks = Array.from(player.querySelectorAll('path')).slice(2);
+    const circles = Array.from(player.querySelectorAll('circle')).splice(1);
+    const playerPoints = player.querySelector('.playerPoints');
+    playerPoints.value = Number(playerPoints.innerText) + 50;
+    showPoints(ticks, circles, playerPoints);
+  }
+
   //Function to show the ticks
   function showPoints(ticks, circles, playerPoints) {
     let numCircles = 0;
@@ -55,19 +65,6 @@
     }
     playerPoints.innerText = playerPoints.value;
   }
-
-
-
-
-
-
-
-
-
-
-
-
-
 
   // Function to show the options modal. the Onclick is on the HTML playerName
   function showPlayerOptions(element) {
@@ -93,18 +90,40 @@
   }
 
   // Function to select an option. the Onclick is on the HTML modal
-  function selectOption(self) {
-    console.log(self.innerText);
-    switch (self.innerText) {
+  function selectOption(element) {
+    console.log(element.innerText);
+    switch (element.innerText) {
       case 'Carrões':
-        var inputValue = self.querySelector('input').value;
+        var inputValue = element.querySelector('input').value;
         console.log(inputValue);
       break;
       case 'Bater':
         console.log('Ok, bateu');
       break;
       case 'Galou':
-        console.log(self.parentNode.parentNode);
+        const player = element.parentNode.parentNode.querySelector('h3').innerText;
+        const playerList = document.querySelectorAll('.playerName');
+        playerList.forEach(function(playerName) {
+          if (playerName.innerText === player) {
+            console.log('ok');
+            console.log(playerName);
+            galada(playerName);
+          }
+        });
+        var modal = document.getElementById("optionsModal");
+        modal.style.display = "none";
+        break;
+      case 'Passei':
+        const playerP = element.parentNode.parentNode.querySelector('h3').innerText;
+        const playerListP = document.querySelectorAll('.playerName');
+        playerListP.forEach(function(playerName) {
+          if (playerName.innerText !== playerP) {
+            console.log(playerName);
+            add10(playerName);
+          }
+        });
+        var modal = document.getElementById("optionsModal");
+        modal.style.display = "none";
       break;
     }
   }
