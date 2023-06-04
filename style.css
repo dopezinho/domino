@@ -37,7 +37,6 @@ main {
 
 #totalClicks1, #totalClicks2, #totalClicks3 {
     font-size: 2.5rem;
-    padding: 0 40px;
 }
 
 /*  Contagem de pontos  */
@@ -52,7 +51,10 @@ main svg {
 }
 
 .cls-10, .cls-11, .cls-20, .cls-22, .cls-30, .cls-33 {
-    stroke: transparent;
+    fill: transparent;
+}
+.cls-11 {
+    
 }
 
 .ticked {
