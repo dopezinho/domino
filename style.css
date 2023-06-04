@@ -13,6 +13,12 @@ main {
     min-height: 100vh;
 }
 
+/*  Dominós  */
+
+#Layer_1, #Layer_2, #Layer_3 {
+    width: 100%;
+}
+
 .plus1-click-5, .plus1-click-10, .plus1-click-20, .plus2-click-5, .plus2-click-10, .plus2-click-20, .plus3-click-5, .plus3-click-10, .plus3-click-20{
     background-color: #000;
     color: #fff;
