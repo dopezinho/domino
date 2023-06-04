@@ -57,6 +57,18 @@
   }
 
 
+
+
+
+
+
+
+
+
+
+
+
+
   // Function to show the options modal. the Onclick is on the HTML playerName
   function showPlayerOptions(element) {
     var modal = document.getElementById("optionsModal");
