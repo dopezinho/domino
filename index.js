@@ -93,14 +93,14 @@
   function selectOption(element) {
     console.log(element.innerText);
     switch (element.innerText) {
-      case 'Carrões':
+      case 'CARRÕES':
         var inputValue = element.querySelector('input').value;
         console.log(inputValue);
       break;
-      case 'Bater':
+      case 'BATER':
         console.log('Ok, bateu');
       break;
-      case 'Galou':
+      case 'GALOU':
         const player = element.parentNode.parentNode.querySelector('h3').innerText;
         const playerList = document.querySelectorAll('.playerName');
         playerList.forEach(function(playerName) {
@@ -112,8 +112,8 @@
         });
         var modal = document.getElementById("optionsModal");
         modal.style.display = "none";
-        break;
-      case 'Passei':
+      break;
+      case 'PASSEI':
         const playerP = element.parentNode.parentNode.querySelector('h3').innerText;
         const playerListP = document.querySelectorAll('.playerName');
         playerListP.forEach(function(playerName) {
