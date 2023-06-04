@@ -75,6 +75,7 @@ main svg {
 }
 
 .container1, .container2, .container3 {
+    align-items: center;
     display: flex;
     flex-direction: column;
 }
