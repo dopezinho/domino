@@ -16,7 +16,7 @@ main {
 /*  Dominós  */
 
 #Layer_1, #Layer_2, #Layer_3 {
-    width: 100%;
+    max-width: 90%;
 }
 
 .plus1-click-5, .plus1-click-10, .plus1-click-20, .plus2-click-5, .plus2-click-10, .plus2-click-20, .plus3-click-5, .plus3-click-10, .plus3-click-20{
@@ -86,10 +86,6 @@ main svg {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-}
-
-#send {
-    width: 15lvw;
 }
 
 /* Styles for the modal */
