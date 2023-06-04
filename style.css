@@ -63,9 +63,18 @@ main svg {
 
 .playersTemplate {
     display: flex;
-    justify-content: center;
-    width: 100lvw;
-    gap: 10lvw;
+    justify-content: space-around;
+}
+
+.player1, .player2, .player3 {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.container1, .container2, .container3 {
+    display: flex;
+    flex-direction: column;
 }
 
 .playerName {
