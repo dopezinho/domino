@@ -130,8 +130,10 @@
         element.parentNode.querySelector('#baixar5').style.display = 'flex';
         element.parentNode.querySelector('#baixar6').style.display = 'flex';
       break;
-      case 'BATER':
-        addData();
+      case 'BATEU':
+        addData(rodadaN);
+        var modal = document.getElementById("optionsModal");
+        modal.style.display = "none";
       break;
       case 'GALOU':
         const player = element.parentNode.parentNode.querySelector('h3').innerText;
