@@ -9,7 +9,9 @@
   const plusFiveRect3 = document.getElementById('plus-five-rect3')
   const minusFiveRect3 = document.getElementById('minus-five-rect3')
   
-  
+  let aux = {};
+
+
   //Functions to keep track off points by buttons
   function add5(element) {
     const player = element.parentNode.parentNode.parentNode;
@@ -47,9 +49,15 @@
     showPoints(ticks, circles, playerPoints);
   }
 
+    
+  // Galadas: 0,
+  // Carrao: 0,
+  // Baixou: 0,
+  // Começou: 0,
+  // Bateu: 0,
+  // Passou: 0
   function galada(element) {
     const player = element.parentNode;
-    console.log(player);
     const ticks = Array.from(player.querySelectorAll('path')).slice(2);
     const circles = Array.from(player.querySelectorAll('circle')).splice(1);
     const playerPoints = player.querySelector('.playerPoints');
@@ -128,7 +136,8 @@
   let ncarrao;
   let rodadaN = 1;
   function selectOption(element) {
-    console.log(element.innerText);
+    var player;
+    var playerList;
     switch (element.innerText) {
       case 'CARRÕES':
         var modal = document.getElementById("optionsModal");
@@ -138,42 +147,70 @@
         element.parentNode.querySelector('#baixar6').style.display = 'flex';
       break;
       case 'BATEU':
+        player = element.parentNode.parentNode.querySelector('h3').innerText;
+        playerList = document.querySelectorAll('.playerName');
+        playerList.forEach(function(playerName) {
+          if (playerName.innerText === player) {
+            const bateu = playerName.dataset.bateu || 0;
+            playerName.dataset.bateu = parseInt(bateu) + 1;
+          }
+        });
         addData(rodadaN);
         var modal = document.getElementById("optionsModal");
         modal.style.display = "none";
+        rodadaN += 1;
+        playerList.forEach(function(playerName) {
+          playerName.dataset.bateu = 0;
+          playerName.dataset.nCarrao = 0;
+          playerName.dataset.galouCount = 0; 
+          playerName.dataset.passou = 0;
+          playerName.dataset.baixou = 0;
+        });
+
+        //reset datasets
+
       break;
       case 'GALOU':
-        const player = element.parentNode.parentNode.querySelector('h3').innerText;
-        const playerList = document.querySelectorAll('.playerName');
+        player = element.parentNode.parentNode.querySelector('h3').innerText;
+        playerList = document.querySelectorAll('.playerName');
         playerList.forEach(function(playerName) {
           if (playerName.innerText === player) {
+            const galouCount = playerName.dataset.galouCount || 0;
+            playerName.dataset.galouCount = parseInt(galouCount) + 1;
             galada(playerName);
+            console.log(playerName);
           }
-        });
+        });      
         var modal = document.getElementById("optionsModal");
         modal.style.display = "none";
+        
       break;
       case 'PASSOU':
-        const playerP = element.parentNode.parentNode.querySelector('h3').innerText;
-        const playerListP = document.querySelectorAll('.playerName');
-        playerListP.forEach(function(playerName) {
-          if (playerName.innerText !== playerP) {
-            console.log(playerP);
-            console.log(playerName);
+        player = element.parentNode.parentNode.querySelector('h3').innerText;
+        playerList = document.querySelectorAll('.playerName');
+        playerList.forEach(function(playerName) {
+          if (playerName.innerText !== player) {
+
             (function(currentPlayer) {
               console.log(currentPlayer);
               passar(currentPlayer);
             })(playerName);
+          }
+          else {
+            const passou = playerName.dataset.passou || 0;
+            playerName.dataset.passou = parseInt(passou) + 1;
           }
         });
         var modal = document.getElementById("optionsModal");
         modal.style.display = "none";
       break;
       case 'BAIXOU':
-        const playerC = element.parentNode.parentNode.querySelector('h3').innerText;
-        const playerListC = document.querySelectorAll('.playerName');
-        playerListC.forEach(function(playerName) {
-          if (playerName.innerText === playerC) {
+        player = element.parentNode.parentNode.querySelector('h3').innerText;
+        playerList = document.querySelectorAll('.playerName');
+        playerList.forEach(function(playerName) {
+          if (playerName.innerText === player) {
+            const baixou = playerName.dataset.baixou || 0;
+            playerName.dataset.baixou = parseInt(baixou) + 1;
             carrao(playerName, ncarrao);
           }
         });
@@ -186,6 +223,14 @@
         element.parentNode.style.display = 'none';
         var modal = document.getElementById("optionsModal");
         modal.style.display = "none";
+        player = element.parentNode.parentNode.parentNode.querySelector('h3').innerText;
+        playerList = document.querySelectorAll('.playerName');
+        playerList.forEach(function(playerName) {
+          if (playerName.innerText === player) {
+            const nCarrao = playerName.dataset.nCarrao || 0;
+            playerName.dataset.nCarrao = parseInt(nCarrao) + ncarrao;
+          }
+          })
       break;
       case '5':
         ncarrao = element.value
@@ -193,6 +238,14 @@
         element.parentNode.style.display = 'none';
         var modal = document.getElementById("optionsModal");
         modal.style.display = "none";
+        player = element.parentNode.parentNode.parentNode.querySelector('h3').innerText;
+        playerList = document.querySelectorAll('.playerName');
+        playerList.forEach(function(playerName) {
+          if (playerName.innerText === player) {
+            const nCarrao = playerName.dataset.nCarrao || 0;
+            playerName.dataset.nCarrao = parseInt(nCarrao) + ncarrao;
+          }
+          })
       break;
       case '6':
         ncarrao = element.value
@@ -200,6 +253,14 @@
         element.parentNode.style.display = 'none';
         var modal = document.getElementById("optionsModal");
         modal.style.display = "none";
+        player = element.parentNode.parentNode.parentNode.querySelector('h3').innerText;
+        playerList = document.querySelectorAll('.playerName');
+        playerList.forEach(function(playerName) {
+          if (playerName.innerText === player) {
+            const nCarrao = playerName.dataset.nCarrao || 0;
+            playerName.dataset.nCarrao = parseInt(nCarrao) + ncarrao;
+          }
+          })
       break;
     }
   }
@@ -208,26 +269,38 @@
   function addData(rodada) {
     const players = document.querySelectorAll('.playerName');
     const points = document.querySelectorAll('.playerPoints');
-    const rodadaKey = `Rodada ${rodada}`;
+    var rodadaKey = `Rodada ${rodada}`;
     const carrao = 'Número de Carrões'
-    
-    players.forEach(function(player, i=0) {
+    players.forEach(function(player, index) {
       const playerName = player.innerText;
       data.Players[playerName] = {
+        ...data.Players[playerName],
         [rodadaKey]: {}
-      };
+      };  
       data.Players[playerName][rodadaKey] = {
-        Pontos : points[i].value,
-        [carrao]: 0,
-        Galadas: 0,
-        Baixou: 0,
+        Pontos : points[index].value,
+        [carrao]: player.dataset.nCarrao,
+        Galadas: player.dataset.galouCount,
+        Baixou: player.dataset.baixou,
         Começou: 0,
-        Bateu: 0
+        Bateu: player.dataset.bateu,
+        Passou: player.dataset.passou
       }
       console.log(data);
-      i+= 1;
     });
   }
 
 
+  
+  function getGalada() {
+    const galadaStatus = document.querySelectorAll('.playerName');
+    console.log(galadaStatus);
+    galadaStatus.forEach(function(status){
+      var stat = status.getAttribute('class');
+      if (stat === 'playerName galou') {
+        return 
+      }
+    })
+  }
 
+  getGalada()
