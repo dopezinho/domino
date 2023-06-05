@@ -1,8 +1,21 @@
   let data = {Players:{},
               Winner:0,
               Day:0};
+<<<<<<< HEAD
   
 
+=======
+
+
+  //Plus and Minus five buttons
+  const plusFiveRect1 = document.getElementById('plus-five-rect1')
+  const minusFiveRect1 = document.getElementById('minus-five-rect1')
+  const plusFiveRect2 = document.getElementById('plus-five-rect2')
+  const minusFiveRect2 = document.getElementById('minus-five-rect2')
+  const plusFiveRect3 = document.getElementById('plus-five-rect3')
+  const minusFiveRect3 = document.getElementById('minus-five-rect3')
+  
+>>>>>>> 739ea13f0a6790c2d931aeeb8e7785a29a2eb65f
 
   //Functions to keep track off points by buttons
   function add5(element) {
@@ -41,13 +54,6 @@
     showPoints(ticks, circles, playerPoints);
   }
 
-    
-  // Galadas: 0,
-  // Carrao: 0,
-  // Baixou: 0,
-  // Começou: 0,
-  // Bateu: 0,
-  // Passou: 0
   function galada(element) {
     const player = element.parentNode;
     const ticks = Array.from(player.querySelectorAll('path')).slice(2);
@@ -59,7 +65,6 @@
 
   function passar(element) {
     const player = element.parentNode;
-    console.log(player);
     const ticks = Array.from(player.querySelectorAll('path')).slice(2);
     const circles = Array.from(player.querySelectorAll('circle')).splice(1);
     const playerPoints = player.querySelector('.playerPoints');
@@ -69,7 +74,6 @@
 
   function carrao(element, ncarrao) {
     const player = element.parentNode;
-    console.log(player);
     const ticks = Array.from(player.querySelectorAll('path')).slice(2);
     const circles = Array.from(player.querySelectorAll('circle')).splice(1);
     const playerPoints = player.querySelector('.playerPoints');
@@ -151,16 +155,21 @@
         var modal = document.getElementById("optionsModal");
         modal.style.display = "none";
         rodadaN += 1;
+        //reset datasets
         playerList.forEach(function(playerName) {
           playerName.dataset.bateu = 0;
           playerName.dataset.nCarrao = 0;
           playerName.dataset.galouCount = 0; 
           playerName.dataset.passou = 0;
           playerName.dataset.baixou = 0;
+          playerName.dataset.fechou = 0;
         });
-
-        //reset datasets
-
+        playerList.forEach(function(playerName) {
+          if (playerName.innerText === player) {
+            const bateu = playerName.dataset.bateu || 0;
+            playerName.dataset.bateu = parseInt(bateu) + 1;
+          }
+        });
       break;
       case 'GALOU':
         player = element.parentNode.parentNode.querySelector('h3').innerText;
@@ -170,7 +179,6 @@
             const galouCount = playerName.dataset.galouCount || 0;
             playerName.dataset.galouCount = parseInt(galouCount) + 1;
             galada(playerName);
-            console.log(playerName);
           }
         });      
         var modal = document.getElementById("optionsModal");
@@ -184,7 +192,6 @@
           if (playerName.innerText !== player) {
 
             (function(currentPlayer) {
-              console.log(currentPlayer);
               passar(currentPlayer);
             })(playerName);
           }
@@ -208,6 +215,29 @@
         });
         var modal = document.getElementById("optionsModal");
         modal.style.display = "none";
+      break;
+      case 'FECHOU':
+        player = element.parentNode.parentNode.querySelector('h3').innerText;
+        playerList = document.querySelectorAll('.playerName');
+        playerList.forEach(function(playerName) {
+          if (playerName.innerText === player) {
+            const fechou = playerName.dataset.fechou || 0;
+            playerName.dataset.fechou = parseInt(fechou) + 1;
+          }
+        });
+        addData(rodadaN);
+        var modal = document.getElementById("optionsModal");
+        modal.style.display = "none";
+        rodadaN += 1;
+        //reset datasets
+        playerList.forEach(function(playerName) {
+          playerName.dataset.bateu = 0;
+          playerName.dataset.nCarrao = 0;
+          playerName.dataset.galouCount = 0; 
+          playerName.dataset.passou = 0;
+          playerName.dataset.baixou = 0;
+          playerName.dataset.fechou = 0;
+        });
       break;
       case '4':
         ncarrao = element.value;
@@ -276,23 +306,17 @@
         Baixou: player.dataset.baixou,
         Começou: 0,
         Bateu: player.dataset.bateu,
-        Passou: player.dataset.passou
+        Passou: player.dataset.passou,
+        Fechou: player.dataset.fechou
       }
-      console.log(data);
     });
-  }
 
-
-  
-  function getGalada() {
-    const galadaStatus = document.querySelectorAll('.playerName');
-    console.log(galadaStatus);
-    galadaStatus.forEach(function(status){
-      var stat = status.getAttribute('class');
-      if (stat === 'playerName galou') {
-        return 
+    for (const player in data.Players) {
+      const points = data.Players[player][rodadaKey].Pontos;
+      if (points >= 200) {
+        /////////Oq deve acontecer quando alguem ganha
+       window.alert(`Vencedor: ${player}`) 
       }
-    })
+    }
   }
 
-  getGalada()
