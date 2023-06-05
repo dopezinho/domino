@@ -28,6 +28,7 @@ main {
     color: #fff;
     cursor: pointer;
     font-size: 2rem;
+    font-weight: 400;
     min-width: 100px
 }
 
@@ -36,6 +37,7 @@ main {
     color: #fff;
     cursor: pointer;
     font-size: 2rem;
+    font-weight: 400;
     min-width: 100px
 }
 
@@ -96,7 +98,6 @@ main svg {
 
 button {
     border-radius: 5px;
-    gap: 0 50px;
 }
 
 /* Styles for the modal */
@@ -149,6 +150,10 @@ li {
 
 li:hover {
     background-color: #232323;
+}
+
+.playerPoints {
+    font-weight: 900;
 }
 
 #baixar4, #baixar5, #baixar6 {
