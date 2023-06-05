@@ -121,8 +121,8 @@
   let ncarrao
   function selectOption(element) {
     console.log(element.innerText);
-    const playerC = element.parentNode.parentNode.querySelector('h3').innerText;
-    const playerListC = document.querySelectorAll('.playerName');
+    // const playerC = element.parentNode.parentNode.querySelector('h3').innerText;
+    // const playerListC = document.querySelectorAll('.playerName');
     switch (element.innerText) {
       case 'CARRÕES':
         var modal = document.getElementById("optionsModal");
@@ -130,7 +130,6 @@
         element.parentNode.querySelector('#baixar4').style.display = 'flex';
         element.parentNode.querySelector('#baixar5').style.display = 'flex';
         element.parentNode.querySelector('#baixar6').style.display = 'flex';
-
       break;
       case 'BATER':
         addData();
@@ -170,6 +169,27 @@
             carrao(playerName, ncarrao);
           }
         });
+        var modal = document.getElementById("optionsModal");
+        modal.style.display = "none";
+      break;
+      case '4':
+        ncarrao = element.value;
+        element.parentNode.parentNode.querySelector('#baixar').style.display = 'block';
+        element.parentNode.style.display = 'none';
+        var modal = document.getElementById("optionsModal");
+        modal.style.display = "none";
+      break;
+      case '5':
+        ncarrao = element.value
+        element.parentNode.parentNode.querySelector('#baixar').style.display = 'block';
+        element.parentNode.style.display = 'none';
+        var modal = document.getElementById("optionsModal");
+        modal.style.display = "none";
+      break;
+      case '6':
+        ncarrao = element.value
+        element.parentNode.parentNode.querySelector('#baixar').style.display = 'block';
+        element.parentNode.style.display = 'none';
         var modal = document.getElementById("optionsModal");
         modal.style.display = "none";
       break;
