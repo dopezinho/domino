@@ -120,6 +120,7 @@ main svg {
 .plus-five-button1, .plus-five-button2, .plus-five-button3 {
     background-color: transparent;
     border: transparent;
+    color: red;
     cursor: pointer;
     height: 120px;
     position: absolute;
@@ -129,6 +130,7 @@ main svg {
 .minus-five-button1, .minus-five-button2, .minus-five-button3 {
     background-color: transparent;
     border: transparent;
+    color: red;
     cursor: pointer;
     height: 120px;
     position: absolute;
