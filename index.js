@@ -132,6 +132,8 @@
         element.parentNode.querySelector('#baixar6').style.display = 'flex';
       break;
       case 'BATER':
+        var modal = document.getElementById("optionsModal");
+        modal.style.display = "none";
         addData();
       break;
       case 'GALOU':
