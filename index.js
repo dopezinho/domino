@@ -1,6 +1,13 @@
   let data = {Players:{},
               Winner:0,
               Day:0};
+  //Plus and Minus five buttons
+  const plusFiveRect1 = document.getElementById('plus-five-rect1')
+  const minusFiveRect1 = document.getElementById('minus-five-rect1')
+  const plusFiveRect2 = document.getElementById('plus-five-rect2')
+  const minusFiveRect2 = document.getElementById('minus-five-rect2')
+  const plusFiveRect3 = document.getElementById('plus-five-rect3')
+  const minusFiveRect3 = document.getElementById('minus-five-rect3')
   
   
   //Functions to keep track off points by buttons

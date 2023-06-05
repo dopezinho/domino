@@ -98,6 +98,13 @@ main svg {
     stroke: #fff;
 }
 
+#plus-five-rect1, #plus-five-rect2, #plus-five-rect3 {
+    fill: red;
+}
+#minus-five-rect1, #minus-five-rect2, #minus-five-rect3 {
+    fill: red;
+}
+
 /* Players Template */
 
 .playerName {
