@@ -19,7 +19,7 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    min-height: 100vh;
+    min-height: 100lvh;
 }
 
 /*  Dominós  */
@@ -215,7 +215,6 @@ li:hover {
     li {
         font-size: 1rem;
         margin: 3vh 0;
-        padding: 4vh 6vh;
         width: 120px;
     }
     #baixar4, #baixar5, #baixar6 {
