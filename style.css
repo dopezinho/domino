@@ -1,5 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,500;0,600;0,800;0,900;1,400&display=swap');
+
 * {
     box-sizing: border-box;
+    font-family: 'Montserrat Alternates', sans-serif;
     margin: 0;
     padding: 0;
 }
@@ -20,23 +23,19 @@ main {
 
 /*  Dominós  */
 
-#Layer_1, #Layer_2, #Layer_3 {
-    max-width: 90%;
-}
-
 .plus1-click-5, .plus1-click-10, .plus1-click-20, .plus2-click-5, .plus2-click-10, .plus2-click-20, .plus3-click-5, .plus3-click-10, .plus3-click-20{
-    background-color: #000000c2;
+    background-color: #0000008f;
     color: #fff;
     cursor: pointer;
-    font-size: 2.5rem;
+    font-size: 2rem;
     min-width: 100px
 }
 
 .minus1-click, .minus2-click, .minus3-click {
-    background-color: #000000c2;
+    background-color: #0000008f;
     color: #fff;
     cursor: pointer;
-    font-size: 2.5rem;
+    font-size: 2rem;
     min-width: 100px
 }
 
@@ -47,7 +46,8 @@ main {
 /*  Contagem de pontos  */
 
 main svg {
-    height: 300px;
+    height: 250px;
+    margin-bottom: 50px;
 }
 
 .cls-1, .cls-2, .cls-4 {
@@ -55,8 +55,7 @@ main svg {
     stroke: #fff;
 }
 .cls-3 {
-    fill: #000000c2;
-    stroke: #fff;
+    fill: #0000008f;
 }
 
 .cls-10, .cls-11, .cls-20, .cls-22, .cls-30, .cls-33 {
@@ -93,13 +92,6 @@ main svg {
     cursor: pointer;
 }
 
-.submitButtom {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
 /*  Buttons  */
 
 button {
@@ -112,8 +104,7 @@ button {
     display: none;
     position: fixed;
     z-index: 1;
-    left: 25%;
-    top: 25%;
+    top: 0;
     width: 100%;
     height: 100%;
     overflow: auto;
@@ -122,19 +113,20 @@ button {
 .modal-content {
     align-items: center;
     background-color: #000000e9;
-    border: 1px solid #fff;
-    border-radius: 5px;
     color: #fff;
     display: flex;
     flex-direction: column;
-    font-size: 1rem;
-    height: 50%;
-    justify-content: space-around;
-    width: 50%;
+    font-size: 1.5rem;
+    gap: 1vh;
+    height: 100%;
+}
+
+h2 {
+    font-size: 1.5rem;
 }
 
 h3 {
-    font-size: 2rem;
+    font-size: 3rem;
 }
 
 li {
@@ -143,8 +135,9 @@ li {
     border-radius: 5px;
     display: flex;
     flex-direction: column;
-    margin: 2.5vh;
-    padding: 1.5vh;
+    font-size: 1.5rem;
+    margin: 6vh;
+    padding: 3vh;
     text-transform: uppercase;
 }
 
@@ -152,9 +145,14 @@ li:hover {
     background-color: #232323;
 }
 
+.modal-content span {
+    font-size: 4rem;
+}
+
 input {
     border-radius: 5px;
-    width: 50%;
+    height: 25px;
+    width: 80%;
 }
   
 .close {
