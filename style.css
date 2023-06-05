@@ -9,6 +9,7 @@
 
 body {
     background-image: url(./src/domino-bg.jpg);
+    background-position: center;
     background-repeat: no-repeat;
 }
 
@@ -17,32 +18,61 @@ main {
     color: #fff;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
-    min-height: 100vh;
+    justify-content: center;
+    min-height: 100svh;
 }
 
-/*  Dominós  */
+/*  Heading  */
 
-.plus1-click-5, .plus1-click-10, .plus1-click-20, .plus2-click-5, .plus2-click-10, .plus2-click-20, .plus3-click-5, .plus3-click-10, .plus3-click-20{
-    background-color: #0000008f;
-    color: #fff;
-    cursor: pointer;
-    font-size: 2rem;
+.heading {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+/*  Fonts  */
+
+h1 {
+    font-size: 3rem;
+    font-weight: 900;
+}
+
+h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    padding: 3vh 0;
+}
+
+h3 {
+    font-size: 3rem;
+    font-weight: 600;
+}
+
+h4 {
+    font-size: 1rem;
     font-weight: 400;
-    min-width: 100px
 }
 
-.minus1-click, .minus2-click, .minus3-click {
-    background-color: #0000008f;
-    color: #fff;
-    cursor: pointer;
-    font-size: 2rem;
-    font-weight: 400;
-    min-width: 100px
+li {
+    align-items: center;
+    background-color: #23232382;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    display: flex;
+    font-size: 1.5rem;
+    justify-content: center;
+    margin: 3vh 0;
+    padding: 3vh;
+    text-transform: uppercase;
+    width: 180px;
 }
 
-#totalClicks1, #totalClicks2, #totalClicks3 {
-    font-size: 2.5rem;
+li:hover {
+    background-color: #232323;
+}
+
+.playerPoints {
+    font-weight: 900;
 }
 
 /*  Contagem de pontos  */
@@ -64,15 +94,18 @@ main svg {
     fill: transparent;
 }
 
-
 .ticked {
     stroke: #fff;
 }
 
-
 /* Players Template */
 
+.playerName {
+    cursor: pointer;
+}
+
 .playersTemplate {
+    align-items: center;
     display: flex;
     justify-content: space-around;
 }
@@ -90,17 +123,36 @@ main svg {
     gap: 2vh;
 }
 
-.playerName {
-    cursor: pointer;
-}
-
 /*  Buttons  */
 
 button {
     border-radius: 5px;
 }
 
-/* Styles for the modal */
+.plus1-click-5, .plus1-click-10, .plus1-click-20, .plus2-click-5, .plus2-click-10, .plus2-click-20, .plus3-click-5, .plus3-click-10, .plus3-click-20{
+    background-color: #0000008f;
+    color: #fff;
+    cursor: pointer;
+    font-size: 2rem;
+    font-weight: 400;
+    min-width: 100px;
+}
+
+.minus1-click, .minus2-click, .minus3-click {
+    background-color: #0000008f;
+    color: #fff;
+    cursor: pointer;
+    font-size: 2rem;
+    font-weight: 400;
+    min-width: 100px
+}
+
+#totalClicks1, #totalClicks2, #totalClicks3 {
+    font-size: 2.5rem;
+}
+
+/* Modal */
+
 .modal {
     display: none;
     position: fixed;
@@ -122,43 +174,10 @@ button {
     height: 100%;
 }
 
-h2 {
-    font-size: 1.5rem;
-    font-weight: 700;
-    padding: 3vh 0;
-}
-
-h3 {
-    font-size: 3rem;
-    font-weight: 600;
-}
-
-li {
-    align-items: center;
-    background-color: #23232382;
-    border-radius: 5px;
-    display: flex;
-    flex-direction: column;
-    font-size: 1.5rem;
-    font-weight: 400;
-    margin: 3vh 0;
-    padding: 4vh;
-    text-align: center;
-    text-transform: uppercase;
-    width: 180px;
-}
-
-li:hover {
-    background-color: #232323;
-}
-
-.playerPoints {
-    font-weight: 900;
-}
-
 #baixar4, #baixar5, #baixar6 {
-    background-color: red;
-    padding: 3vh;
+    background-color: #8f0a0a;
+    border: transparent;
+    padding: 2vh 4vh;
 }
 
 #baixar4:hover, #baixar5:hover, #baixar6:hover {
@@ -180,17 +199,19 @@ li:hover {
 }
 
 .modalOptions-carroes {
+    align-items: center;
     display: flex;
+    justify-content: center;
     gap: 2vh;
 }
 
 .modalOptions-carroes li {
-    width: 80px;
+    width: 20px;
 }
   
 .close:hover,
 .close:focus {
-    color: black;
+    color: #8f0a0a;
     text-decoration: none;
     cursor: pointer;
 }
@@ -200,7 +221,65 @@ li:hover {
     list-style-type: none;
 }
 
+/*  Media Queries  */
+
+@media (width < 400px) {
+    #Layer_1, #Layer_2, #Layer_3 {
+        height: 200px;
+    }
+    h2 {
+        font-size: 1rem;
+    }
+    li {
+        font-size: 1rem;
+        margin: 3vh 0;
+        width: 120px;
+    }
+    #baixar4, #baixar5, #baixar6 {
+        padding: 10px 0;
+        width: 40px;
+    }
+    .modalOptions-carroes {
+        display: flex;
+        gap: 2vh;
+    }
+}
+
+@media (width > 980px) {
+    body {
+        background-color: #2d2d2d;
+        background-image: none;
+    }
+    main svg {
+        margin-bottom: 10px;
+    }
+    .plus1-click-5, .plus1-click-10, .plus1-click-20, .plus2-click-5, .plus2-click-10, .plus2-click-20, .plus3-click-5, .plus3-click-10, .plus3-click-20 {
+        font-size: 1.5rem;
+        min-width: 80px
+    }    
+    .minus1-click, .minus2-click, .minus3-click {
+        font-size: 1.5rem;
+        min-width: 80px
+    }    
+    #totalClicks1, #totalClicks2, #totalClicks3 {
+        font-size: 1.5rem;
+    }
+}
+
+@media (width > 1400px) {
+    #Layer_1, #Layer_2, #Layer_3 {
+        height: 400px;
+    }
+    h1 {
+        font-size: 5rem;
+    }
+    h2 {
+        font-size: 2.5rem;
+    }
+}
+
 /*  Webkit  */
+
 body,
 body::selection {  
     user-select: none;
