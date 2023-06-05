@@ -19,7 +19,7 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    min-height: 100lvh;
+    min-height: 100svh;
 }
 
 /*  Dominós  */
