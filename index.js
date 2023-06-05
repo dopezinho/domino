@@ -131,7 +131,7 @@
         element.parentNode.querySelector('#baixar5').style.display = 'flex';
         element.parentNode.querySelector('#baixar6').style.display = 'flex';
       break;
-      case 'BATER':
+      case 'BATEU':
         var modal = document.getElementById("optionsModal");
         modal.style.display = "none";
         addData();
@@ -147,7 +147,7 @@
         var modal = document.getElementById("optionsModal");
         modal.style.display = "none";
       break;
-      case 'PASSEI':
+      case 'PASSOU':
         const playerP = element.parentNode.parentNode.querySelector('h3').innerText;
         const playerListP = document.querySelectorAll('.playerName');
         playerListP.forEach(function(playerName) {
