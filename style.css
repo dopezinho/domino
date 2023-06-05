@@ -17,7 +17,7 @@ main {
     color: #fff;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-around;
     min-height: 100vh;
 }
 
@@ -28,7 +28,7 @@ main {
     color: #fff;
     cursor: pointer;
     font-size: 2.5rem;
-    min-width: 100px
+    min-width: 120px
 }
 
 .minus1-click, .minus2-click, .minus3-click {
@@ -46,7 +46,7 @@ main {
 /*  Contagem de pontos  */
 
 main svg {
-    height: 200px;
+    height: 250px;
 }
 
 .cls-1, .cls-2, .cls-4 {
@@ -78,6 +78,7 @@ main svg {
     align-items: center;
     display: flex;
     flex-direction: column;
+    width: 90%;
 }
 
 .container1, .container2, .container3 {
@@ -121,11 +122,11 @@ button {
 }
 
 h2 {
-    font-size: 2rem;
+    font-size: 1.5rem;
 }
 
 h3 {
-    font-size: 3rem;
+    font-size: 2rem;
 }
 
 li {
