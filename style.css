@@ -98,13 +98,6 @@ main svg {
     stroke: #fff;
 }
 
-#plus-five-rect1, #plus-five-rect2, #plus-five-rect3 {
-    fill: red;
-}
-#minus-five-rect1, #minus-five-rect2, #minus-five-rect3 {
-    fill: red;
-}
-
 /* Players Template */
 
 .playerName {
@@ -121,6 +114,26 @@ main svg {
     align-items: center;
     display: flex;
     flex-direction: column;
+    position: relative;
+}
+
+.plus-five-button1, .plus-five-button2, .plus-five-button3 {
+    background-color: transparent;
+    border: transparent;
+    cursor: pointer;
+    height: 120px;
+    position: absolute;
+    top: 13%;
+    width: 125px;
+}
+.minus-five-button1, .minus-five-button2, .minus-five-button3 {
+    background-color: transparent;
+    border: transparent;
+    cursor: pointer;
+    height: 120px;
+    position: absolute;
+    top: 36%;
+    width: 125px;
 }
 
 .container1, .container2, .container3 {
