@@ -139,6 +139,7 @@ li {
     margin: 3vh 0;
     padding: 4vh;
     text-transform: uppercase;
+    width: 180px;
 }
 
 li:hover {
@@ -148,16 +149,32 @@ li:hover {
 #baixar4, #baixar5, #baixar6 {
     background-color: red;
     margin: 0;
-    padding: 3.5vh;
+    padding: 3vh;
+}
+
+#baixar4:hover, #baixar5:hover, #baixar6:hover {
+    background-color: #232323;
+    cursor: pointer;
 }
 
 .modal-content span {
     font-size: 4rem;
 }
 
+.modalOptions {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
 .modalOptions-carroes {
     display: flex;
-    justify-content: flex-start;
+    gap: 2vh;
+}
+
+.modalOptions-carroes li {
+    width: 80px;
 }
   
 .close {
