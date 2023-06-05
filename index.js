@@ -118,11 +118,11 @@
   }
 
   // Function to select an option. the Onclick is on the HTML modal
-  let ncarrao
+  let ncarrao;
+  let rodadaN = 1;
   function selectOption(element) {
     console.log(element.innerText);
-    const playerC = element.parentNode.parentNode.querySelector('h3').innerText;
-    const playerListC = document.querySelectorAll('.playerName');
+
     switch (element.innerText) {
       case 'CARRÕES':
         ncarrao = document.getElementById('nCarroes').value;
@@ -133,7 +133,12 @@
 
       break;
       case 'BATER':
-        addData();
+        addData(rodadaN);
+        element.parentNode.querySelector('#baixar').style.display = 'none';
+        element.parentNode.querySelector('#carroes').style.display = 'block';
+        var modal = document.getElementById("optionsModal");
+        modal.style.display = "none";
+        rodadaN += 1;
       break;
       case 'GALOU':
         const player = element.parentNode.parentNode.querySelector('h3').innerText;
@@ -177,17 +182,29 @@
   }
 
 
-function addData() {
-  const players = document.querySelectorAll('.playerName');
-  const points = document.querySelectorAll('.playerPoints');
-  players.forEach(function(player, i = 0){
-    const playerName = player.innerText;
-    data.Players[playerName] = {};
+  function addData(rodada) {
+    const players = document.querySelectorAll('.playerName');
+    const points = document.querySelectorAll('.playerPoints');
+    const rodadaKey = `Rodada ${rodada}`;
+    const carrao = 'Número de Carrões'
     
-    data.Players[playerName].Points = points[i].value;
-    i += 1;
-    console.log(data);
-  })
-}
+    players.forEach(function(player, i=0) {
+      const playerName = player.innerText;
+      data.Players[playerName] = {
+        [rodadaKey]: {}
+      };
+      data.Players[playerName][rodadaKey] = {
+        Pontos : points[i].value,
+        [carrao]: 0,
+        Galadas: 0,
+        Baixou: 0,
+        Começou: 0,
+        Bateu: 0
+      }
+      console.log(data);
+      i+= 1;
+    });
+  }
 
+  
 
