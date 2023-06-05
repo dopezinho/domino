@@ -22,6 +22,12 @@ main {
     min-height: 100svh;
 }
 
+.heading {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
 /*  Dominós  */
 
 .plus1-click-5, .plus1-click-10, .plus1-click-20, .plus2-click-5, .plus2-click-10, .plus2-click-20, .plus3-click-5, .plus3-click-10, .plus3-click-20{
@@ -123,6 +129,11 @@ button {
     height: 100%;
 }
 
+h1 {
+    font-size: 3rem;
+    font-weight: 900;
+}
+
 h2 {
     font-size: 1.5rem;
     font-weight: 700;
@@ -132,6 +143,11 @@ h2 {
 h3 {
     font-size: 3rem;
     font-weight: 600;
+}
+
+h4 {
+    font-size: 1rem;
+    font-weight: 400;
 }
 
 li {
@@ -232,11 +248,27 @@ li:hover {
         background-color: #2d2d2d;
         background-image: none;
     }
+    main svg {
+        margin-bottom: 10px;
+    }
+    .plus1-click-5, .plus1-click-10, .plus1-click-20, .plus2-click-5, .plus2-click-10, .plus2-click-20, .plus3-click-5, .plus3-click-10, .plus3-click-20 {
+        font-size: 1.5rem;
+        min-width: 80px
+    }
+    
+    .minus1-click, .minus2-click, .minus3-click {
+        font-size: 1.5rem;
+        min-width: 80px
+    }
+    
+    #totalClicks1, #totalClicks2, #totalClicks3 {
+        font-size: 1.5rem;
+    }
 }
 
 @media (width > 1400px) {
     #Layer_1, #Layer_2, #Layer_3 {
-        height: 500px;
+        height: 400px;
     }
     h2 {
         font-size: 3rem;
