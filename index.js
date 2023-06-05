@@ -62,7 +62,7 @@
     const circles = Array.from(player.querySelectorAll('circle')).splice(1);
     const playerPoints = player.querySelector('.playerPoints');
     playerPoints.value = Number(playerPoints.innerText) + ncarrao*10;
-    showPointsGreen(ticks, circles, playerPoints);
+    showPoints(ticks, circles, playerPoints);
   }
 
 
@@ -88,29 +88,6 @@
     playerPoints.innerText = playerPoints.value;
   }
 
-  function showPointsGreen(ticks, circles, playerPoints) {
-    let numCircles = 0;
-    if (playerPoints.value <= 400 && playerPoints.value >= 0){
-    ticks.forEach(function(tick) {
-      tick.classList.remove('ticked');
-      tick.classList.remove('green');
-    });
-    circles.forEach(function(circle) {
-      circle.classList.remove('ticked');
-      circle.classList.remove('green');
-    });
-    numCircles = playerPoints.value / 50;
-      for (i = 1; i <= playerPoints.value/5; i++) {
-        ticks[i - 1].classList.add('ticked');
-        ticks[i - 1].classList.add('green');
-        for (j = 1; j <= numCircles; j ++) {
-          circles[j- 1].classList.add('ticked');
-          circles[j- 1].classList.add('green');
-        }
-      }
-    }
-    playerPoints.innerText = playerPoints.value;
-  }
 
   // Function to show the options modal. the Onclick is on the HTML playerName
   function showPlayerOptions(element) {
