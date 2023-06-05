@@ -414,11 +414,16 @@
       <span class="close">&times;</span>
       <h3 id="modalHeading"></h3>
       <ul class="modalOptions">
-        <li onclick="selectOption(this)">Bater</li>
+        <li onclick="selectOption(this)">Bateu</li>
         <li onclick="selectOption(this)">Galou</li>
-        <li onclick="selectOption(this)">Passei</li>
-        <li onclick="selectOption(this)" id="carroes">Carrões<input id="nCarroes" type="number" min="4" max="7" onclick="event.stopPropagation()" oninput="event.preventDefault()"></li>
-        <li onclick="selectOption(this)" id="baixar" style="display: none;">Baixou</li>
+        <li onclick="selectOption(this)">Passou</li>
+        <li onclick="selectOption(this)">Carrões</li>
+        <li onclick="selectOption(this)" style="display: none" id="baixar">Baixou</li>
+        <div class="modalOptions-carroes">
+          <li onclick="selectOption(this)" id="baixar4" style="display: none;" value="4">4</li>
+          <li onclick="selectOption(this)" id="baixar5" style="display: none;" value="5">5</li>
+          <li onclick="selectOption(this)" id="baixar6" style="display: none;" value="6">6</li>
+        </div>
         
       </ul>
     </div>

@@ -122,23 +122,16 @@
   let rodadaN = 1;
   function selectOption(element) {
     console.log(element.innerText);
-
     switch (element.innerText) {
       case 'CARRÕES':
-        ncarrao = document.getElementById('nCarroes').value;
         var modal = document.getElementById("optionsModal");
-        modal.style.display = "none";
         element.style.display = 'none';
-        element.parentNode.querySelector('#baixar').style.display = 'block';
-
+        element.parentNode.querySelector('#baixar4').style.display = 'flex';
+        element.parentNode.querySelector('#baixar5').style.display = 'flex';
+        element.parentNode.querySelector('#baixar6').style.display = 'flex';
       break;
       case 'BATER':
-        addData(rodadaN);
-        element.parentNode.querySelector('#baixar').style.display = 'none';
-        element.parentNode.querySelector('#carroes').style.display = 'block';
-        var modal = document.getElementById("optionsModal");
-        modal.style.display = "none";
-        rodadaN += 1;
+        addData();
       break;
       case 'GALOU':
         const player = element.parentNode.parentNode.querySelector('h3').innerText;
@@ -151,7 +144,7 @@
         var modal = document.getElementById("optionsModal");
         modal.style.display = "none";
       break;
-      case 'PASSEI':
+      case 'PASSOU':
         const playerP = element.parentNode.parentNode.querySelector('h3').innerText;
         const playerListP = document.querySelectorAll('.playerName');
         playerListP.forEach(function(playerName) {
@@ -175,6 +168,27 @@
             carrao(playerName, ncarrao);
           }
         });
+        var modal = document.getElementById("optionsModal");
+        modal.style.display = "none";
+      break;
+      case '4':
+        ncarrao = element.value;
+        element.parentNode.parentNode.querySelector('#baixar').style.display = 'block';
+        element.parentNode.style.display = 'none';
+        var modal = document.getElementById("optionsModal");
+        modal.style.display = "none";
+      break;
+      case '5':
+        ncarrao = element.value
+        element.parentNode.parentNode.querySelector('#baixar').style.display = 'block';
+        element.parentNode.style.display = 'none';
+        var modal = document.getElementById("optionsModal");
+        modal.style.display = "none";
+      break;
+      case '6':
+        ncarrao = element.value
+        element.parentNode.parentNode.querySelector('#baixar').style.display = 'block';
+        element.parentNode.style.display = 'none';
         var modal = document.getElementById("optionsModal");
         modal.style.display = "none";
       break;
@@ -206,5 +220,5 @@
     });
   }
 
-  
+
 

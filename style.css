@@ -123,10 +123,13 @@ button {
 
 h2 {
     font-size: 1.5rem;
+    font-weight: 700;
+    padding: 3vh 0;
 }
 
 h3 {
     font-size: 3rem;
+    font-weight: 600;
 }
 
 li {
@@ -136,31 +139,48 @@ li {
     display: flex;
     flex-direction: column;
     font-size: 1.5rem;
-    margin: 6vh;
-    padding: 3vh;
+    font-weight: 400;
+    margin: 3vh 0;
+    padding: 4vh;
+    text-align: center;
     text-transform: uppercase;
+    width: 180px;
 }
 
 li:hover {
     background-color: #232323;
 }
 
-.modal-content span {
-    font-size: 4rem;
+#baixar4, #baixar5, #baixar6 {
+    background-color: red;
+    padding: 3vh;
 }
 
-input {
-    border-radius: 5px;
-    height: 25px;
-    width: 80%;
-}
-  
-.close {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
+#baixar4:hover, #baixar5:hover, #baixar6:hover {
+    background-color: #232323;
     cursor: pointer;
+}
+
+.modal-content span {
+    color: #fff;
+    font-size: 4rem;
+    font-weight: 900;
+}
+
+.modalOptions {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.modalOptions-carroes {
+    display: flex;
+    gap: 2vh;
+}
+
+.modalOptions-carroes li {
+    width: 80px;
 }
   
 .close:hover,
