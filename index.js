@@ -152,6 +152,7 @@
         var modal = document.getElementById("optionsModal");
         modal.style.display = "none";
         rodadaN += 1;
+        //reset datasets
         playerList.forEach(function(playerName) {
           playerName.dataset.bateu = 0;
           playerName.dataset.nCarrao = 0;
@@ -160,7 +161,7 @@
           playerName.dataset.baixou = 0;
         });
 
-        //reset datasets
+
 
       break;
       case 'GALOU':
