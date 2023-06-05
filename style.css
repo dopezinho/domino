@@ -9,6 +9,7 @@
 
 body {
     background-image: url(./src/domino-bg.jpg);
+    background-position: center;
     background-repeat: no-repeat;
 }
 
@@ -143,7 +144,7 @@ li {
     font-size: 1.5rem;
     font-weight: 400;
     margin: 3vh 0;
-    padding: 4vh;
+    padding: 3vh;
     text-align: center;
     text-transform: uppercase;
     width: 180px;
@@ -200,6 +201,47 @@ li:hover {
 .modalOptions > li{
     cursor: pointer;
     list-style-type: none;
+}
+
+/*  Media Queries  */
+
+@media (width < 400px) {
+    #Layer_1, #Layer_2, #Layer_3 {
+        height: 200px;
+    }
+    h2 {
+        font-size: 1rem;
+    }
+    li {
+        font-size: 1rem;
+        margin: 3vh 0;
+        padding: 4vh 6vh;
+        width: 120px;
+    }
+    #baixar4, #baixar5, #baixar6 {
+        padding: 10px 0;
+        width: 40px;
+    }
+    .modalOptions-carroes {
+        display: flex;
+        gap: 2vh;
+    }
+}
+
+@media (width > 980px) {
+    body {
+        background-color: #2d2d2d;
+        background-image: none;
+    }
+}
+
+@media (width > 1400px) {
+    #Layer_1, #Layer_2, #Layer_3 {
+        height: 500px;
+    }
+    h2 {
+        font-size: 3rem;
+    }
 }
 
 /*  Webkit  */
