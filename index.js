@@ -125,11 +125,11 @@
     const playerListC = document.querySelectorAll('.playerName');
     switch (element.innerText) {
       case 'CARRÕES':
-        ncarrao = document.getElementById('nCarroes').value;
         var modal = document.getElementById("optionsModal");
-        modal.style.display = "none";
         element.style.display = 'none';
-        element.parentNode.querySelector('#baixar').style.display = 'block';
+        element.parentNode.querySelector('#baixar4').style.display = 'flex';
+        element.parentNode.querySelector('#baixar5').style.display = 'flex';
+        element.parentNode.querySelector('#baixar6').style.display = 'flex';
 
       break;
       case 'BATER':
