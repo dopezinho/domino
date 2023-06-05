@@ -422,7 +422,9 @@
         <li onclick="selectOption(this)">Bater</li>
         <li onclick="selectOption(this)">Galou</li>
         <li onclick="selectOption(this)">Passei</li>
-        <li onclick="selectOption(this)">Carrões<input type="number" min="4" max="7" onclick="event.stopPropagation()" oninput="event.preventDefault()"></li>
+        <li onclick="selectOption(this)">Carrões<input id="nCarroes" type="number" min="4" max="7" onclick="event.stopPropagation()" oninput="event.preventDefault()"></li>
+        <li onclick="selectOption(this)" id="baixar" style="display: none;">Baixou</li>
+        
       </ul>
     </div>
   </div>

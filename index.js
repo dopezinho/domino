@@ -45,6 +45,28 @@
     showPoints(ticks, circles, playerPoints);
   }
 
+  function passar(element) {
+    const player = element.parentNode;
+    console.log(player);
+    const ticks = Array.from(player.querySelectorAll('path')).slice(2);
+    const circles = Array.from(player.querySelectorAll('circle')).splice(1);
+    const playerPoints = player.querySelector('.playerPoints');
+    playerPoints.value = Number(playerPoints.innerText) + 10;
+    showPoints(ticks, circles, playerPoints);
+  }
+
+  function carrao(element, ncarrao) {
+    const player = element.parentNode;
+    console.log(player);
+    const ticks = Array.from(player.querySelectorAll('path')).slice(2);
+    const circles = Array.from(player.querySelectorAll('circle')).splice(1);
+    const playerPoints = player.querySelector('.playerPoints');
+    playerPoints.value = Number(playerPoints.innerText) + ncarrao*10;
+    showPointsGreen(ticks, circles, playerPoints);
+  }
+
+
+
   //Function to show the ticks
   function showPoints(ticks, circles, playerPoints) {
     let numCircles = 0;
@@ -60,6 +82,30 @@
         ticks[i - 1].classList.add('ticked');
         for (j = 1; j <= numCircles; j ++) {
           circles[j- 1].classList.add('ticked');
+        }
+      }
+    }
+    playerPoints.innerText = playerPoints.value;
+  }
+
+  function showPointsGreen(ticks, circles, playerPoints) {
+    let numCircles = 0;
+    if (playerPoints.value <= 400 && playerPoints.value >= 0){
+    ticks.forEach(function(tick) {
+      tick.classList.remove('ticked');
+      tick.classList.remove('green');
+    });
+    circles.forEach(function(circle) {
+      circle.classList.remove('ticked');
+      circle.classList.remove('green');
+    });
+    numCircles = playerPoints.value / 50;
+      for (i = 1; i <= playerPoints.value/5; i++) {
+        ticks[i - 1].classList.add('ticked');
+        ticks[i - 1].classList.add('green');
+        for (j = 1; j <= numCircles; j ++) {
+          circles[j- 1].classList.add('ticked');
+          circles[j- 1].classList.add('green');
         }
       }
     }
@@ -90,12 +136,19 @@
   }
 
   // Function to select an option. the Onclick is on the HTML modal
+  let ncarrao
   function selectOption(element) {
     console.log(element.innerText);
+    const playerC = element.parentNode.parentNode.querySelector('h3').innerText;
+    const playerListC = document.querySelectorAll('.playerName');
     switch (element.innerText) {
       case 'CARRÕES':
-        var inputValue = element.querySelector('input').value;
-        console.log(inputValue);
+        ncarrao = document.getElementById('nCarroes').value;
+        var modal = document.getElementById("optionsModal");
+        modal.style.display = "none";
+        element.style.display = 'none';
+        element.parentNode.querySelector('#baixar').style.display = 'block';
+
       break;
       case 'BATER':
         console.log('Ok, bateu');
@@ -105,8 +158,6 @@
         const playerList = document.querySelectorAll('.playerName');
         playerList.forEach(function(playerName) {
           if (playerName.innerText === player) {
-            console.log('ok');
-            console.log(playerName);
             galada(playerName);
           }
         });
@@ -118,8 +169,23 @@
         const playerListP = document.querySelectorAll('.playerName');
         playerListP.forEach(function(playerName) {
           if (playerName.innerText !== playerP) {
+            console.log(playerP);
             console.log(playerName);
-            add10(playerName);
+            (function(currentPlayer) {
+              console.log(currentPlayer);
+              passar(currentPlayer);
+            })(playerName);
+          }
+        });
+        var modal = document.getElementById("optionsModal");
+        modal.style.display = "none";
+      break;
+      case 'BAIXOU':
+        const playerC = element.parentNode.parentNode.querySelector('h3').innerText;
+        const playerListC = document.querySelectorAll('.playerName');
+        playerListC.forEach(function(playerName) {
+          if (playerName.innerText === playerC) {
+            carrao(playerName, ncarrao);
           }
         });
         var modal = document.getElementById("optionsModal");
