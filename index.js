@@ -1,3 +1,8 @@
+  let data = {Players:{},
+              Winner:0,
+              Day:0};
+  
+  
   //Functions to keep track off points by buttons
   function add5(element) {
     const player = element.parentNode.parentNode.parentNode;
@@ -128,7 +133,7 @@
 
       break;
       case 'BATER':
-        console.log('Ok, bateu');
+        addData();
       break;
       case 'GALOU':
         const player = element.parentNode.parentNode.querySelector('h3').innerText;
@@ -170,5 +175,19 @@
       break;
     }
   }
+
+
+function addData() {
+  const players = document.querySelectorAll('.playerName');
+  const points = document.querySelectorAll('.playerPoints');
+  players.forEach(function(player, i = 0){
+    const playerName = player.innerText;
+    data.Players[playerName] = {};
+    
+    data.Players[playerName].Points = points[i].value;
+    i += 1;
+    console.log(data);
+  })
+}
 
 

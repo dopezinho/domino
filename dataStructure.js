@@ -1,5 +1,4 @@
-const dataStructure = [{'Game':1,
-                        'Players':{
+const dataStructure = [{'Players':{
                             'Biel':{
                                 'Rodada 1':{
                                     'Pontos': 90,
