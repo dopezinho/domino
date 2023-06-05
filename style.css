@@ -54,13 +54,15 @@ h4 {
 }
 
 li {
+    align-items: center;
     background-color: #23232382;
     border: 1px solid #fff;
     border-radius: 5px;
+    display: flex;
     font-size: 1.5rem;
+    justify-content: center;
     margin: 3vh 0;
     padding: 3vh;
-    text-align: center;
     text-transform: uppercase;
     width: 180px;
 }
@@ -174,7 +176,7 @@ button {
 #baixar4, #baixar5, #baixar6 {
     background-color: #8f0a0a;
     border: transparent;
-    padding: 3vh;
+    padding: 2vh 4vh;
 }
 
 #baixar4:hover, #baixar5:hover, #baixar6:hover {
@@ -196,12 +198,14 @@ button {
 }
 
 .modalOptions-carroes {
+    align-items: center;
     display: flex;
+    justify-content: center;
     gap: 2vh;
 }
 
 .modalOptions-carroes li {
-    width: 80px;
+    width: 20px;
 }
   
 .close:hover,
