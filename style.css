@@ -46,7 +46,7 @@ main {
 /*  Contagem de pontos  */
 
 main svg {
-    height: 300px;
+    height: 200px;
 }
 
 .cls-1, .cls-2, .cls-4 {
@@ -78,7 +78,6 @@ main svg {
     align-items: center;
     display: flex;
     flex-direction: column;
-    width: 90%;
 }
 
 .container1, .container2, .container3 {
