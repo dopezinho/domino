@@ -22,112 +22,15 @@ main {
     min-height: 100svh;
 }
 
+/*  Heading  */
+
 .heading {
     align-items: center;
     display: flex;
     flex-direction: column;
 }
 
-/*  Dominós  */
-
-.plus1-click-5, .plus1-click-10, .plus1-click-20, .plus2-click-5, .plus2-click-10, .plus2-click-20, .plus3-click-5, .plus3-click-10, .plus3-click-20{
-    background-color: #0000008f;
-    color: #fff;
-    cursor: pointer;
-    font-size: 2rem;
-    font-weight: 400;
-    min-width: 100px
-}
-
-.minus1-click, .minus2-click, .minus3-click {
-    background-color: #0000008f;
-    color: #fff;
-    cursor: pointer;
-    font-size: 2rem;
-    font-weight: 400;
-    min-width: 100px
-}
-
-#totalClicks1, #totalClicks2, #totalClicks3 {
-    font-size: 2.5rem;
-}
-
-/*  Contagem de pontos  */
-
-main svg {
-    height: 250px;
-    margin-bottom: 50px;
-}
-
-.cls-1, .cls-2, .cls-4 {
-    fill: #fff;
-    stroke: #fff;
-}
-.cls-3 {
-    fill: #0000008f;
-}
-
-.cls-10, .cls-11, .cls-20, .cls-22, .cls-30, .cls-33 {
-    fill: transparent;
-}
-
-
-.ticked {
-    stroke: #fff;
-}
-
-
-/* Players Template */
-
-.playersTemplate {
-    display: flex;
-    justify-content: space-around;
-}
-
-.player1, .player2, .player3 {
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-}
-
-.container1, .container2, .container3 {
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    gap: 2vh;
-}
-
-.playerName {
-    cursor: pointer;
-}
-
-/*  Buttons  */
-
-button {
-    border-radius: 5px;
-}
-
-/* Styles for the modal */
-.modal {
-    display: none;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-}
-  
-.modal-content {
-    align-items: center;
-    background-color: #000000e9;
-    color: #fff;
-    display: flex;
-    flex-direction: column;
-    font-size: 1.5rem;
-    gap: 1vh;
-    height: 100%;
-}
+/*  Fonts  */
 
 h1 {
     font-size: 3rem;
@@ -151,14 +54,10 @@ h4 {
 }
 
 li {
-    align-items: center;
     background-color: #23232382;
     border: 1px solid #fff;
     border-radius: 5px;
-    display: flex;
-    flex-direction: column;
     font-size: 1.5rem;
-    font-weight: 400;
     margin: 3vh 0;
     padding: 3vh;
     text-align: center;
@@ -172,6 +71,104 @@ li:hover {
 
 .playerPoints {
     font-weight: 900;
+}
+
+/*  Contagem de pontos  */
+
+main svg {
+    height: 250px;
+    margin-bottom: 50px;
+}
+
+.cls-1, .cls-2, .cls-4 {
+    fill: #fff;
+    stroke: #fff;
+}
+.cls-3 {
+    fill: #0000008f;
+}
+
+.cls-10, .cls-11, .cls-20, .cls-22, .cls-30, .cls-33 {
+    fill: transparent;
+}
+
+.ticked {
+    stroke: #fff;
+}
+
+/* Players Template */
+
+.playerName {
+    cursor: pointer;
+}
+
+.playersTemplate {
+    display: flex;
+    justify-content: space-around;
+}
+
+.player1, .player2, .player3 {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.container1, .container2, .container3 {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 2vh;
+}
+
+/*  Buttons  */
+
+button {
+    border-radius: 5px;
+}
+
+.plus1-click-5, .plus1-click-10, .plus1-click-20, .plus2-click-5, .plus2-click-10, .plus2-click-20, .plus3-click-5, .plus3-click-10, .plus3-click-20{
+    background-color: #0000008f;
+    color: #fff;
+    cursor: pointer;
+    font-size: 2rem;
+    font-weight: 400;
+    min-width: 100px;
+}
+
+.minus1-click, .minus2-click, .minus3-click {
+    background-color: #0000008f;
+    color: #fff;
+    cursor: pointer;
+    font-size: 2rem;
+    font-weight: 400;
+    min-width: 100px
+}
+
+#totalClicks1, #totalClicks2, #totalClicks3 {
+    font-size: 2.5rem;
+}
+
+/* Modal */
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+}
+  
+.modal-content {
+    align-items: center;
+    background-color: #000000e9;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    font-size: 1.5rem;
+    gap: 1vh;
+    height: 100%;
 }
 
 #baixar4, #baixar5, #baixar6 {
@@ -254,13 +251,11 @@ li:hover {
     .plus1-click-5, .plus1-click-10, .plus1-click-20, .plus2-click-5, .plus2-click-10, .plus2-click-20, .plus3-click-5, .plus3-click-10, .plus3-click-20 {
         font-size: 1.5rem;
         min-width: 80px
-    }
-    
+    }    
     .minus1-click, .minus2-click, .minus3-click {
         font-size: 1.5rem;
         min-width: 80px
-    }
-    
+    }    
     #totalClicks1, #totalClicks2, #totalClicks3 {
         font-size: 1.5rem;
     }
@@ -268,7 +263,10 @@ li:hover {
 
 @media (width > 1400px) {
     #Layer_1, #Layer_2, #Layer_3 {
-        height: 400px;
+        height: 350px;
+    }
+    h1 {
+        font-size: 5rem;
     }
     h2 {
         font-size: 3rem;
@@ -276,6 +274,7 @@ li:hover {
 }
 
 /*  Webkit  */
+
 body,
 body::selection {  
     user-select: none;
