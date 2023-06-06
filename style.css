@@ -119,8 +119,8 @@ main svg {
 
 .plus-five-button1, .plus-five-button2, .plus-five-button3 {
     background-color: transparent;
-    border: 1px solid red;
-    color: red;
+    border: 1px solid transparent;
+    color: transparent;
     cursor: pointer;
     height: 120px;
     position: absolute;
@@ -129,8 +129,8 @@ main svg {
 }
 .minus-five-button1, .minus-five-button2, .minus-five-button3 {
     background-color: transparent;
-    border: 1px solid red;
-    color: red;
+    border: 1px solid transparent;
+    color: transparent;
     cursor: pointer;
     height: 120px;
     position: absolute;
@@ -297,7 +297,7 @@ button {
     }
     .plus-five-button1, .plus-five-button2, .plus-five-button3 {
         height: 120px;
-        top: 17%;
+        top: 16%;
         width: 120px;
     }
     .minus-five-button1, .minus-five-button2, .minus-five-button3 {
@@ -319,7 +319,7 @@ button {
     }
     .plus-five-button1, .plus-five-button2, .plus-five-button3 {
         height: 200px;
-        top: 15%;
+        top: 16%;
         width: 200px;
     }
     .minus-five-button1, .minus-five-button2, .minus-five-button3 {
