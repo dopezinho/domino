@@ -119,22 +119,22 @@ main svg {
 
 .plus-five-button1, .plus-five-button2, .plus-five-button3 {
     background-color: transparent;
-    border: transparent;
+    border: 1px solid red;
     color: red;
     cursor: pointer;
     height: 120px;
     position: absolute;
-    top: 13%;
+    top: 15%;
     width: 125px;
 }
 .minus-five-button1, .minus-five-button2, .minus-five-button3 {
     background-color: transparent;
-    border: transparent;
+    border: 1px solid red;
     color: red;
     cursor: pointer;
     height: 120px;
     position: absolute;
-    top: 36%;
+    top: 41%;
     width: 125px;
 }
 
@@ -155,22 +155,21 @@ button {
     background-color: #0000008f;
     color: #fff;
     cursor: pointer;
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-weight: 400;
-    min-width: 100px;
+    min-width: 80px;
 }
 
 .minus1-click, .minus2-click, .minus3-click {
     background-color: #0000008f;
     color: #fff;
     cursor: pointer;
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-weight: 400;
-    min-width: 100px
+    min-width: 80px
 }
-
 #totalClicks1, #totalClicks2, #totalClicks3 {
-    font-size: 2.5rem;
+    font-size: 1.5rem;
 }
 
 /* Modal */
@@ -265,6 +264,16 @@ button {
         display: flex;
         gap: 2vh;
     }
+    .plus-five-button1, .plus-five-button2, .plus-five-button3 {
+        height: 95px;
+        top: 15%;
+        width: 100px;
+    }
+    .minus-five-button1, .minus-five-button2, .minus-five-button3 {
+        height: 95px;
+        top: 39%;
+        width: 100px;
+    }
 }
 
 @media (width > 980px) {
@@ -286,6 +295,16 @@ button {
     #totalClicks1, #totalClicks2, #totalClicks3 {
         font-size: 1.5rem;
     }
+    .plus-five-button1, .plus-five-button2, .plus-five-button3 {
+        height: 120px;
+        top: 17%;
+        width: 120px;
+    }
+    .minus-five-button1, .minus-five-button2, .minus-five-button3 {
+        height: 120px;
+        top: 44%;
+        width: 120px;
+    }
 }
 
 @media (width > 1400px) {
@@ -297,6 +316,16 @@ button {
     }
     h2 {
         font-size: 2.5rem;
+    }
+    .plus-five-button1, .plus-five-button2, .plus-five-button3 {
+        height: 200px;
+        top: 15%;
+        width: 200px;
+    }
+    .minus-five-button1, .minus-five-button2, .minus-five-button3 {
+        height: 200px;
+        top: 47%;
+        width: 200px;
     }
 }
 
