@@ -24,11 +24,11 @@ header {
     height: 18svh;
     justify-content: center;
     margin: 2svh 2svh 0 2svh;
-    transition: 2s ease;
+    transition: 1s ease;
 }
 
 header:hover {
-    background-color: transparent;
+    background-color: #2323239d;
     transition: 0.5s ease;
 }
 
@@ -109,11 +109,11 @@ span {
     display: flex;
     justify-content: center;
     width: 100%;
-    transition: 2s ease;
+    transition: 1s ease;
 }
 
 .player1:hover, .player2:hover, .player3:hover {
-    background-color: transparent;
+    background-color: #2323239d;
     transition: 0.5s ease;
 }
 
@@ -155,7 +155,7 @@ span {
 }
 
 .player-info button {
-    background-color: #6958ca8a;
+    background-color: #6958ca8c;
     border: 1px solid #fff;
     font-size: 1.5rem;
     font-weight: 100;
@@ -182,7 +182,7 @@ span {
     stroke: #fff;
 }
 .cls-3 {
-    fill: #0000008f;
+    fill: transparent;
 }
 
 .cls-10, .cls-11, .cls-20, .cls-22, .cls-30, .cls-33 {
