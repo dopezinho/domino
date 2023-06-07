@@ -320,3 +320,22 @@
     }
   }
 
+  /* Mutable Screens */
+
+  function changeScreen1() {
+    const playersSelect = document.getElementById('playersSelect')
+    const playersInput3 = document.getElementById('playersInput3')
+    const messageGapH2 = document.getElementById('messageGapH2')
+    playersSelect.style.display = 'none'
+    playersInput3.style.display = 'flex'
+    messageGapH2.innerHTML = 'Digite o nome dos jogadores e clique no dominó para continuar'
+  }
+
+  function changeScreen2() {
+    const playersInput3 = document.getElementById('playersInput3')
+    const playersTemplate = document.getElementById('playersTemplate')
+    const messageGapH2 = document.getElementById('messageGapH2')
+    playersInput3.style.display = 'none'
+    playersTemplate.style.display = 'flex'
+    messageGapH2.innerHTML = "auiiiiii let's play"
+  }
