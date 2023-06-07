@@ -100,7 +100,7 @@ span {
     margin: 0 2svh 2svh 2svh;
 }
 
-.playersSelect1, .playersSelect2, .playersSelect3 {
+.playersSelect2, .playersSelect3, .playersSelect4 {
     align-items: center;
     background-color: #232323f2;
     border-radius: 10px;
@@ -112,7 +112,7 @@ span {
     transition: 1s ease;
 }
 
-.playersSelect1:hover, .playersSelect2:hover, .playersSelect3:hover {    
+.playersSelect2:hover, .playersSelect3:hover, .playersSelect4:hover {    
     background-color: #2323239d;
     cursor: pointer;
     transition: 0.5s ease;
@@ -120,7 +120,36 @@ span {
 
 .playersSelect svg {
     height: 360px;
-}    
+}
+
+/*  Players Input  */
+
+.playersInput3 {
+    display: flex;
+    height: 70svh;
+}
+
+.playersInput3Name {
+    display: flex;
+    flex-direction: column;
+    width: 67%;
+}
+
+.playersInput3Selected {
+    align-items: center;
+    background-color: #232323f2;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 2svh;
+    justify-content: center;
+    margin-right: 2svh;
+    width: 33%;
+}
+
+.playersInput3Selected svg {
+    height: 360px;
+}
 
 /* Players Template */
 
