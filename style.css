@@ -89,6 +89,39 @@ span {
     font-weight: 900;
 }
 
+  /*  MUTABLE CONTAINER  */
+
+/*  Players Select  */
+
+.playersSelect {
+    display: flex;
+    gap: 2svh;
+    height: 70svh;
+    margin: 0 2svh 2svh 2svh;
+}
+
+.playersSelect1, .playersSelect2, .playersSelect3 {
+    align-items: center;
+    background-color: #232323f2;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 2svh;
+    justify-content: center;
+    width: 100%;
+    transition: 1s ease;
+}
+
+.playersSelect1:hover, .playersSelect2:hover, .playersSelect3:hover {    
+    background-color: #2323239d;
+    cursor: pointer;
+    transition: 0.5s ease;
+}
+
+.playersSelect svg {
+    height: 360px;
+}    
+
 /* Players Template */
 
 .domino svg {
