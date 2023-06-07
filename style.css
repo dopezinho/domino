@@ -130,25 +130,74 @@ span {
 }
 
 .playersInput3Name {
+    align-items: flex-start;
+    background-color: #232323f2;
+    border-radius: 10px;
     display: flex;
     flex-direction: column;
+    justify-content: space-around;
+    margin: 0 2svh;
+    transition: 1s ease;
     width: 67%;
+}
+
+.playersInput3Name:hover {    
+    background-color: #2323239d;
+    transition: 0.5s ease;
+}
+
+.playersInput3Name h3 {
+    align-items: center;
+    background-color: #6958CA;
+    border: transparent;
+    border-radius: 10px 0 0 10px;
+    display: flex;
+    height: 90px;
+    margin-left: 50px;
+    justify-content: center;
+    width: 120px;
+}
+
+.playersInput3Name input {
+    background-color: #00000099;
+    border: transparent;
+    border-radius: 0 10px 10px 0;
+    font-size: 3rem;
+    height: 90px;
+    padding-left: 20px;
+    width: 100svh;
+}
+
+input:focus {
+    outline: none;
+}
+
+.playersInput3Name1, .playersInput3Name2, .playersInput3Name3 {
+    display: flex;
+    justify-content: center;
+}
+
+.playersInput3Selected svg {
+    height: 360px;
 }
 
 .playersInput3Selected {
     align-items: center;
     background-color: #232323f2;
     border-radius: 10px;
+    cursor: pointer;
     display: flex;
     flex-direction: column;
     gap: 2svh;
     justify-content: center;
     margin-right: 2svh;
+    transition: 1s ease;
     width: 33%;
 }
 
-.playersInput3Selected svg {
-    height: 360px;
+.playersInput3Selected:hover {
+    background-color: #2323239d;
+    transition: 0.5s ease;
 }
 
 /* Players Template */
