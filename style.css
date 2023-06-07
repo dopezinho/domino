@@ -24,12 +24,12 @@ header {
     height: 18svh;
     justify-content: center;
     margin: 2svh 2svh 0 2svh;
-    transition: 1s ease;
+    transition: 1.5s ease;
 }
 
 header:hover {
-    background-color: #2323239d;
-    transition: 0.5s ease;
+    background-color: transparent;
+    transition: 1s ease;
 }
 
 .head-text {
@@ -51,7 +51,6 @@ h1 {
 }
 
 h2 {
-    cursor: pointer;
     font-size: 1.5rem;
     font-weight: 700;
 }
