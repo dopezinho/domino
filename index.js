@@ -382,7 +382,7 @@
   /* chat gpt code */
   
 const header = document.getElementById('header');
-const elements = ['select2', 'select3', 'select4', 'inputHover', 'inputSelected3', 'p1', 'p2', 'p3'];
+const elements = ['select2', 'select3', 'select4', 'inputHover', 'inputSelected3', 'p1', 'p2', 'p3', 'j1', 'j2', 'j3'];
 
 elements.forEach((elementId) => {
   const element = document.getElementById(elementId);
