@@ -17,24 +17,12 @@ body {
 
 header {
     align-items: center;
-    background-color: #232323f2;
+    background-color: #22215773;
     border-radius: 10px;
     display: flex;
     height: 18svh;
-    justify-content: space-between;
     margin: 2svh 2svh 0 2svh;
     transition: 1.5s ease;
-}
-
-header button {
-    background-color: transparent;
-    border-radius: 10px;
-    border-left: transparent;
-    border-top: transparent;
-    border-bottom: transparent;
-    cursor: pointer;
-    height: 18vh;
-    width: 5vh;
 }
 
 header:hover {
@@ -111,7 +99,7 @@ span {
 
 .playersSelect2, .playersSelect3, .playersSelect4 {
     align-items: center;
-    background-color: #232323f2;
+    background-color: #33328373;
     border-radius: 10px;
     display: flex;
     flex-direction: column;
@@ -130,7 +118,7 @@ span {
 }
 
 .playersSelect3:hover {
-    background-color: #2323239d !important;
+    background-color: #add84736 !important;
 }
 
 .playersSelect2:hover, .playersSelect4:hover {
@@ -150,7 +138,7 @@ span {
 
 .playersInput3Name {
     align-items: flex-start;
-    background-color: #232323f2;
+    background-color: #22215773;
     border-radius: 10px;
     display: flex;
     flex-direction: column;
@@ -161,13 +149,13 @@ span {
 }
 
 .playersInput3Name:hover {    
-    background-color: #2323239d !important;
+    background-color: #222157b4 !important;
     transition: 0.5s ease;
 }
 
 .playersInput3Name h3 {
     align-items: center;
-    background-color: #6958CA;
+    background-color: #222157b4;
     border: transparent;
     border-radius: 10px 0 0 10px;
     display: flex;
@@ -202,7 +190,7 @@ input:focus {
 
 .playersInput3Selected {
     align-items: center;
-    background-color: #232323f2;
+    background-color: #22215773;
     border-radius: 10px;
     cursor: pointer;
     display: flex;
@@ -215,7 +203,7 @@ input:focus {
 }
 
 .playersInput3Selected:hover {
-    background-color: #2323239d !important;
+    background-color: #add84736 !important;
     transition: 0.5s ease;
 }
 
@@ -234,7 +222,7 @@ input:focus {
 
 .player1, .player2, .player3 {
     align-items: center;
-    background-color: #232323f2;
+    background-color: #22215773;
     border-radius: 10px;
     display: flex;
     justify-content: center;
@@ -243,7 +231,7 @@ input:focus {
 }
 
 .player1:hover, .player2:hover, .player3:hover {
-    background-color: #2323239d !important;
+    background-color: #222157b4 !important;
     transition: 0.5s ease;
 }
 
@@ -285,8 +273,8 @@ input:focus {
 }
 
 .player-info button {
-    background-color: #6958ca8c;
-    border: 1px solid #fff;
+    background-color: #0000006e;
+    color: transparent;
     font-size: 1.5rem;
     font-weight: 100;
     height: 120px;
@@ -294,9 +282,10 @@ input:focus {
 }
 
 .player-info button:nth-child(2) {
-    border-radius: 10px 10px 0 0;
+    border-radius: 0 0 10px 10px;
     cursor: pointer;
     margin-top: 30px;
+    rotate: 180deg;
 }
 
 .player-info button:nth-child(3) {
@@ -394,95 +383,6 @@ input:focus {
     list-style-type: none;
 }
 
-/*  Media Queries  */
-/*
-
-@media (width < 400px) {
-    #Layer_1, #Layer_2, #Layer_3 {
-        height: 200px;
-    }
-    h2 {
-        font-size: 1rem;
-    }
-    li {
-        font-size: 1rem;
-        margin: 3vh 0;
-        width: 120px;
-    }
-    #baixar4, #baixar5, #baixar6 {
-        padding: 10px 0;
-        width: 40px;
-    }
-    .modalOptions-carroes {
-        display: flex;
-        gap: 2vh;
-    }
-    .plus-five-button1, .plus-five-button2, .plus-five-button3 {
-        height: 95px;
-        top: 15%;
-        width: 100px;
-    }
-    .minus-five-button1, .minus-five-button2, .minus-five-button3 {
-        height: 95px;
-        top: 39%;
-        width: 100px;
-    }
-}
-
-@media (width > 980px) {
-    body {
-        background-color: #2d2d2d;
-        background-image: none;
-    }
-    main svg {
-        margin-bottom: 10px;
-    }
-    .plus1-click-5, .plus1-click-10, .plus1-click-20, .plus2-click-5, .plus2-click-10, .plus2-click-20, .plus3-click-5, .plus3-click-10, .plus3-click-20 {
-        font-size: 1.5rem;
-        min-width: 80px
-    }    
-    .minus1-click, .minus2-click, .minus3-click {
-        font-size: 1.5rem;
-        min-width: 80px
-    }    
-    #totalClicks1, #totalClicks2, #totalClicks3 {
-        font-size: 1.5rem;
-    }
-    .plus-five-button1, .plus-five-button2, .plus-five-button3 {
-        height: 120px;
-        top: 16%;
-        width: 120px;
-    }
-    .minus-five-button1, .minus-five-button2, .minus-five-button3 {
-        height: 120px;
-        top: 44%;
-        width: 120px;
-    }
-}
-
-@media (width > 1400px) {
-    #Layer_1, #Layer_2, #Layer_3 {
-        height: 400px;
-    }
-    h1 {
-        font-size: 5rem;
-    }
-    h2 {
-        font-size: 2.5rem;
-    }
-    .plus-five-button1, .plus-five-button2, .plus-five-button3 {
-        height: 200px;
-        top: 16%;
-        width: 200px;
-    }
-    .minus-five-button1, .minus-five-button2, .minus-five-button3 {
-        height: 200px;
-        top: 47%;
-        width: 200px;
-    }
-}
-
-*/
 /*  Webkit  */
 
 body,
