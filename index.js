@@ -341,7 +341,8 @@
   }
 
   /* header:hover */
-
+  
+/* fezinho's code
   const header = document.getElementById('header')
   const select2 = document.getElementById('select2')
   const select3 = document.getElementById('select3')
@@ -374,5 +375,17 @@
   header.addEventListener('mouseenter', () => player2.style.backgroundColor = 'transparent')
   header.addEventListener('mouseleave', () => player2.style.backgroundColor = '#232323f2')
 
-  header.addEventListener('mouseenter', () => player3.style.backgroundColor = 'transparent')
-  header.addEventListener('mouseleave', () => player3.style.backgroundColor = '#232323f2')
+  header.addEventListener('mouseenter', () => player.style.backgroundColor = 'transparent')
+  header.addEventListener('mouseleave', () => player.style.backgroundColor = '#232323f2')
+   */
+
+  /* chat gpt code */
+  
+const header = document.getElementById('header');
+const elements = ['select2', 'select3', 'select4', 'inputHover', 'inputSelected3', 'p1', 'p2', 'p3'];
+
+elements.forEach((elementId) => {
+  const element = document.getElementById(elementId);
+  header.addEventListener('mouseenter', () => element.style.backgroundColor = 'transparent');
+  header.addEventListener('mouseleave', () => element.style.backgroundColor = '#232323f2');
+});
