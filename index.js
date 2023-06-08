@@ -389,3 +389,12 @@ elements.forEach((elementId) => {
   header.addEventListener('mouseenter', () => element.style.backgroundColor = 'transparent');
   header.addEventListener('mouseleave', () => element.style.backgroundColor = '#232323f2');
 });
+
+/* change bg */
+
+const maua = document.getElementById('maua')
+const body = document.getElementById('body')
+
+function changeBg() {
+  body.style.backgroundImage = 'url(./src/cbg5.png)'
+}

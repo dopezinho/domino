@@ -17,14 +17,25 @@ body {
 }
 
 header {
+    align-items: center;
     background-color: #232323f2;
     border-radius: 10px;
     display: flex;
-    flex-direction: column;
     height: 18svh;
-    justify-content: center;
+    justify-content: space-between;
     margin: 2svh 2svh 0 2svh;
     transition: 1.5s ease;
+}
+
+header button {
+    background-color: transparent;
+    border-radius: 10px;
+    border-left: transparent;
+    border-top: transparent;
+    border-bottom: transparent;
+    cursor: pointer;
+    height: 18vh;
+    width: 5vh;
 }
 
 header:hover {
