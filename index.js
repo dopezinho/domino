@@ -396,5 +396,5 @@ const maua = document.getElementById('maua')
 const body = document.getElementById('body')
 
 function changeBg() {
-  body.style.backgroundImage = 'url(./src/bege1.png)'
+  body.style.backgroundImage = 'url(./src/bege2.png)'
 }
