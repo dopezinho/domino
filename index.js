@@ -341,3 +341,38 @@
   }
 
   /* header:hover */
+
+  const header = document.getElementById('header')
+  const select2 = document.getElementById('select2')
+  const select3 = document.getElementById('select3')
+  const select4 = document.getElementById('select4')
+  const inputHover = document.getElementById('inputHover')
+  const inputSelected3 = document.getElementById('inputSelected3')
+  const player1 = document.getElementById('p1')
+  const player2 = document.getElementById('p2')
+  const player3 = document.getElementById('p3')
+
+
+  header.addEventListener('mouseenter', () => select2.style.backgroundColor = 'transparent')
+  header.addEventListener('mouseleave', () => select2.style.backgroundColor = '#232323f2')
+
+  header.addEventListener('mouseenter', () => select3.style.backgroundColor = 'transparent')
+  header.addEventListener('mouseleave', () => select3.style.backgroundColor = '#232323f2')
+
+  header.addEventListener('mouseenter', () => select4.style.backgroundColor = 'transparent')
+  header.addEventListener('mouseleave', () => select4.style.backgroundColor = '#232323f2')
+
+  header.addEventListener('mouseenter', () => inputHover.style.backgroundColor = 'transparent')
+  header.addEventListener('mouseleave', () => inputHover.style.backgroundColor = '#232323f2')
+
+  header.addEventListener('mouseenter', () => inputSelected3.style.backgroundColor = 'transparent')
+  header.addEventListener('mouseleave', () => inputSelected3.style.backgroundColor = '#232323f2')
+
+  header.addEventListener('mouseenter', () => player1.style.backgroundColor = 'transparent')
+  header.addEventListener('mouseleave', () => player1.style.backgroundColor = '#232323f2')
+
+  header.addEventListener('mouseenter', () => player2.style.backgroundColor = 'transparent')
+  header.addEventListener('mouseleave', () => player2.style.backgroundColor = '#232323f2')
+
+  header.addEventListener('mouseenter', () => player3.style.backgroundColor = 'transparent')
+  header.addEventListener('mouseleave', () => player3.style.backgroundColor = '#232323f2')

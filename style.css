@@ -111,10 +111,20 @@ span {
     transition: 1s ease;
 }
 
-.playersSelect2:hover, .playersSelect3:hover, .playersSelect4:hover {    
-    background-color: #2323239d;
+#select3 {
     cursor: pointer;
+}
+
+.playersSelect2:hover, .playersSelect3:hover, .playersSelect4:hover {
     transition: 0.5s ease;
+}
+
+.playersSelect3:hover {
+    background-color: #2323239d !important;
+}
+
+.playersSelect2:hover, .playersSelect4:hover {
+    background-color: #d128281f !important;
 }
 
 .playersSelect svg {
@@ -141,7 +151,7 @@ span {
 }
 
 .playersInput3Name:hover {    
-    background-color: #2323239d;
+    background-color: #2323239d !important;
     transition: 0.5s ease;
 }
 
@@ -195,7 +205,7 @@ input:focus {
 }
 
 .playersInput3Selected:hover {
-    background-color: #2323239d;
+    background-color: #2323239d !important;
     transition: 0.5s ease;
 }
 
@@ -223,7 +233,7 @@ input:focus {
 }
 
 .player1:hover, .player2:hover, .player3:hover {
-    background-color: #2323239d;
+    background-color: #2323239d !important;
     transition: 0.5s ease;
 }
 

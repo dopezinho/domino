@@ -21,7 +21,7 @@
       <h2 id="messageGapH2">Selecione o número de jogadores :</h2>
     </section>
     <section class="playersSelect" id="playersSelect">
-      <div class="playersSelect2">
+      <div class="playersSelect2" id="select2">
         <h3>2</h3>
         <svg viewBox="0 0 160 320" fill="none" xmlns="http://www.w3.org/2000/svg">
           <g clip-path="url(#clip0_99_1619)">
@@ -36,7 +36,7 @@
           </clipPath>
         </svg>          
       </div>
-      <div class="playersSelect3" onclick="changeScreen1()">
+      <div class="playersSelect3" onclick="changeScreen1()" id="select3">
         <h3>3</h3>
         <svg viewBox="0 0 160 320" fill="none" xmlns="http://www.w3.org/2000/svg">
           <g clip-path="url(#clip0_99_1629)">
@@ -50,7 +50,7 @@
           </clipPath>
         </svg>          
       </div>
-      <div class="playersSelect4">
+      <div class="playersSelect4" id="select4">
         <h3>4</h3>
         <svg viewBox="0 0 160 320" fill="none" xmlns="http://www.w3.org/2000/svg">
           <g clip-path="url(#clip0_99_1629)">
@@ -66,7 +66,7 @@
       </div>
     </section>
     <section class="playersInput3" style="display: none;" id="playersInput3" >
-      <div class="playersInput3Name">
+      <div class="playersInput3Name" id="inputHover">
         <div class="playersInput3Name1">
           <h3>J1</h3>
           <input type="text">
@@ -80,7 +80,7 @@
           <input type="text">
         </div>
       </div>
-      <div class="playersInput3Selected" onclick="changeScreen2()">
+      <div class="playersInput3Selected" onclick="changeScreen2()" id="inputSelected3">
         <h3>3</h3>
         <svg viewBox="0 0 160 320" fill="none" xmlns="http://www.w3.org/2000/svg">
           <g clip-path="url(#clip0_99_1629)">
@@ -96,7 +96,7 @@
       </div>
     </section>
     <section class="playersTemplate" style="display: none;" id="playersTemplate" >
-      <div class="player1">
+      <div class="player1" id="p1">
 
         <div class="domino">
           <?xml version="1.0" encoding="UTF-8"?>
@@ -225,7 +225,7 @@
         </div>
 
       </div>
-      <div class="player2">
+      <div class="player2" id="p2">
 
         <div class="domino">
           <?xml version="1.0" encoding="UTF-8"?>
@@ -354,7 +354,7 @@
         </div>
 
       </div>
-      <div class="player3">
+      <div class="player3" id="p3">
 
         <div class="domino">
           <?xml version="1.0" encoding="UTF-8"?>
