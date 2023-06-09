@@ -1,5 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,500;0,600;0,800;0,900;1,400&display=swap');
 
+:root {
+    --bg-color: #24163173;
+    --bg-hover-color: #0c1120c2;
+    --green: #add84736;
+    --red: #d128281f;
+  }
+
 * {
     box-sizing: border-box;
     color: #fff;
@@ -17,7 +24,7 @@ body {
 
 header {
     align-items: center;
-    background-color: #22215773;
+    background-color: var(--bg-color);
     border-radius: 10px;
     display: flex;
     height: 18svh;
@@ -65,7 +72,7 @@ h4 {
 
 li {
     align-items: center;
-    background-color: #23232382;
+    background-color: var(--bg-color);
     border: 1px solid #fff;
     border-radius: 5px;
     display: flex;
@@ -99,7 +106,7 @@ span {
 
 .playersSelect2, .playersSelect3, .playersSelect4 {
     align-items: center;
-    background-color: #33328373;
+    background-color: var(--bg-color);
     border-radius: 10px;
     display: flex;
     flex-direction: column;
@@ -118,11 +125,11 @@ span {
 }
 
 .playersSelect3:hover {
-    background-color: #add84736 !important;
+    background-color: var(--green) !important;
 }
 
 .playersSelect2:hover, .playersSelect4:hover {
-    background-color: #d128281f !important;
+    background-color: var(--red) !important;
 }
 
 .playersSelect svg {
@@ -138,7 +145,7 @@ span {
 
 .playersInput3Name {
     align-items: flex-start;
-    background-color: #22215773;
+    background-color: var(--bg-color);
     border-radius: 10px;
     display: flex;
     flex-direction: column;
@@ -149,19 +156,20 @@ span {
 }
 
 .playersInput3Name:hover {    
-    background-color: #222157b4 !important;
+    background-color: var(--bg-hover-color) !important;
     transition: 0.5s ease;
 }
 
 .playersInput3Name h3 {
     align-items: center;
-    background-color: #222157b4;
+    background-color: var(--bg-color);
     border: transparent;
     border-radius: 10px 0 0 10px;
     display: flex;
     height: 90px;
     margin-left: 50px;
     justify-content: center;
+    transition: 1s ease;
     width: 120px;
 }
 
@@ -190,7 +198,7 @@ input:focus {
 
 .playersInput3Selected {
     align-items: center;
-    background-color: #22215773;
+    background-color: var(--bg-color);
     border-radius: 10px;
     cursor: pointer;
     display: flex;
@@ -203,7 +211,7 @@ input:focus {
 }
 
 .playersInput3Selected:hover {
-    background-color: #add84736 !important;
+    background-color: var(--green) !important;
     transition: 0.5s ease;
 }
 
@@ -222,7 +230,7 @@ input:focus {
 
 .player1, .player2, .player3 {
     align-items: center;
-    background-color: #22215773;
+    background-color: var(--bg-color);
     border-radius: 10px;
     display: flex;
     justify-content: center;
@@ -231,7 +239,7 @@ input:focus {
 }
 
 .player1:hover, .player2:hover, .player3:hover {
-    background-color: #222157b4 !important;
+    background-color: var(--bg-hover-color) !important;
     transition: 0.5s ease;
 }
 
@@ -336,7 +344,7 @@ input:focus {
 }
 
 #baixar4, #baixar5, #baixar6 {
-    background-color: #8f0a0a;
+    background-color: var(--red);
     border: transparent;
     padding: 10px 0;
     width: 40px;
@@ -373,7 +381,7 @@ input:focus {
   
 .close:hover,
 .close:focus {
-    color: #8f0a0a;
+    color: var(--red);
     text-decoration: none;
     cursor: pointer;
 }

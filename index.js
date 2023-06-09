@@ -386,7 +386,7 @@ const elements = ['select2', 'select3', 'select4', 'inputHover', 'inputSelected3
 elements.forEach((elementId) => {
   const element = document.getElementById(elementId);
   header.addEventListener('mouseenter', () => element.style.backgroundColor = 'transparent');
-  header.addEventListener('mouseleave', () => element.style.backgroundColor = '#22215773');
+  header.addEventListener('mouseleave', () => element.style.backgroundColor = 'var(--bg-color)');
 });
 /* change bg */
 
