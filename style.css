@@ -5,11 +5,12 @@
     --bg-hover-color: #0c1120c2;
     --green: #add84736;
     --red: #d128281f;
+    --white: #fff;
   }
 
 * {
     box-sizing: border-box;
-    color: #fff;
+    color: var(--white);
     font-family: 'Montserrat Alternates', sans-serif;
     margin: 0;
     padding: 0;
@@ -73,7 +74,7 @@ h4 {
 li {
     align-items: center;
     background-color: var(--bg-color);
-    border: 1px solid #fff;
+    border: 1px solid var(--white);
     border-radius: 5px;
     display: flex;
     font-size: 1rem;
@@ -85,7 +86,7 @@ li {
 }
 
 li:hover {
-    background-color: #232323;
+    background-color: var(--bg-hover-color);
 }
 
 span {
@@ -305,8 +306,8 @@ input:focus {
 /*  Ticks  */
 
 .cls-1, .cls-2, .cls-4 {
-    fill: #fff;
-    stroke: #fff;
+    fill: var(--white);
+    stroke: var(--white);
 }
 .cls-3 {
     fill: transparent;
@@ -317,7 +318,7 @@ input:focus {
 }
 
 .ticked {
-    stroke: #fff;
+    stroke: var(--white);
 }
 
 /* Modal */
@@ -334,8 +335,7 @@ input:focus {
   
 .modal-content {
     align-items: center;
-    background-color: #0000009a;
-    color: #fff;
+    background-color: #000000cd;
     display: flex;
     flex-direction: column;
     font-size: 1.5rem;
@@ -351,13 +351,12 @@ input:focus {
 }
 
 #baixar4:hover, #baixar5:hover, #baixar6:hover {
-    background-color: #232323;
+    background-color: var(--bg-hover-color);
     cursor: pointer;
 }
 
 .modal-content span {
-    color: #fff;
-    font-size: 4rem;
+    font-size: 5rem;
     font-weight: 900;
 }
 
@@ -381,7 +380,7 @@ input:focus {
   
 .close:hover,
 .close:focus {
-    color: var(--red);
+    color: #d01030;
     text-decoration: none;
     cursor: pointer;
 }
