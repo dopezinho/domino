@@ -3,8 +3,8 @@
 :root {
     --bg-color: #24163173;
     --bg-hover-color: #0c1120c2;
-    --green: #add84736;
-    --red: #d128281f;
+    --yes: #add84736;
+    --no: #d128281f;
     --white: #fff;
   }
 
@@ -126,11 +126,11 @@ span {
 }
 
 .playersSelect3:hover {
-    background-color: var(--green) !important;
+    background-color: var(--yes) !important;
 }
 
 .playersSelect2:hover, .playersSelect4:hover {
-    background-color: var(--red) !important;
+    background-color: var(--no) !important;
 }
 
 .playersSelect svg {
@@ -212,7 +212,7 @@ input:focus {
 }
 
 .playersInput3Selected:hover {
-    background-color: var(--green) !important;
+    background-color: var(--yes) !important;
     transition: 0.5s ease;
 }
 
@@ -344,7 +344,7 @@ input:focus {
 }
 
 #baixar4, #baixar5, #baixar6 {
-    background-color: var(--red);
+    background-color: var(--no);
     border: transparent;
     padding: 10px 0;
     width: 40px;
