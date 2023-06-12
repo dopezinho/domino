@@ -55,7 +55,7 @@
   }
 
   function galada(element) {
-    const player = element.parentNode;
+    const player = element.parentNode.parentNode;
     const ticks = Array.from(player.querySelectorAll('path')).slice(2);
     const circles = Array.from(player.querySelectorAll('circle')).splice(1);
     const playerPoints = player.querySelector('.playerPoints');
@@ -64,8 +64,7 @@
   }
 
   function passar(element) {
-    const player = element.parentNode;
-    console.log(player);
+    const player = element.parentNode.parentNode;
     const ticks = Array.from(player.querySelectorAll('path')).slice(2);
     const circles = Array.from(player.querySelectorAll('circle')).splice(1);
     const playerPoints = player.querySelector('.playerPoints');
@@ -74,7 +73,7 @@
   }
 
   function carrao(element, ncarrao) {
-    const player = element.parentNode;
+    const player = element.parentNode.parentNode;
     const ticks = Array.from(player.querySelectorAll('path')).slice(2);
     const circles = Array.from(player.querySelectorAll('circle')).splice(1);
     const playerPoints = player.querySelector('.playerPoints');
@@ -190,14 +189,10 @@
         player = element.parentNode.parentNode.querySelector('h3').
         innerText;
         playerList = document.querySelectorAll('.playerName');
-        console.log(playerList);
         playerList.forEach(function(playerName) {
-          if (playerName.innerText !== player) {
-
-            (function(currentPlayer) {
-              passar(currentPlayer);
-            })(playerName);
-          }
+          if (playerName.innerText !== player)  {
+              passar(playerName);
+          } 
           else {
             const passou = playerName.dataset.passou || 0;
             playerName.dataset.passou = parseInt(passou) + 1;
@@ -312,8 +307,8 @@
         Passou: player.dataset.passou,
         Fechou: player.dataset.fechou
       }
+      console.log(data);
     });
-    console.log(data);
     for (const player in data.Players) {
       const points = data.Players[player][rodadaKey].Pontos;
       if (points >= 200) {
