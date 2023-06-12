@@ -19,7 +19,7 @@
 
   //Functions to keep track off points by buttons
   function add5(element) {
-    const player = element.parentNode.parentNode.parentNode;
+    const player = element.parentNode.parentNode;
     const ticks = Array.from(player.querySelectorAll('path')).slice(2);
     const circles = Array.from(player.querySelectorAll('circle')).splice(1);
     const playerPoints = player.querySelector('.playerPoints');
@@ -28,7 +28,7 @@
   }
 
   function add10(element) {
-    const player = element.parentNode.parentNode.parentNode;
+    const player = element.parentNode.parentNode;
     const ticks = Array.from(player.querySelectorAll('path')).slice(2);
     const circles = Array.from(player.querySelectorAll('circle')).splice(1);
     const playerPoints = player.querySelector('.playerPoints');
@@ -37,7 +37,7 @@
   }
 
   function add20(element) {
-    const player = element.parentNode.parentNode.parentNode;
+    const player = element.parentNode.parentNode;
     const ticks = Array.from(player.querySelectorAll('path')).slice(2);
     const circles = Array.from(player.querySelectorAll('circle')).splice(1);
     const playerPoints = player.querySelector('.playerPoints');
@@ -46,7 +46,7 @@
   }
 
   function minus5(element) {
-    const player = element.parentNode.parentNode.parentNode;
+    const player = element.parentNode.parentNode;
     const ticks = Array.from(player.querySelectorAll('path')).slice(2);
     const circles = Array.from(player.querySelectorAll('circle')).splice(1);
     const playerPoints = player.querySelector('.playerPoints');
@@ -65,6 +65,7 @@
 
   function passar(element) {
     const player = element.parentNode;
+    console.log(player);
     const ticks = Array.from(player.querySelectorAll('path')).slice(2);
     const circles = Array.from(player.querySelectorAll('circle')).splice(1);
     const playerPoints = player.querySelector('.playerPoints');
@@ -186,8 +187,10 @@
         
       break;
       case 'PASSOU':
-        player = element.parentNode.parentNode.querySelector('h3').innerText;
+        player = element.parentNode.parentNode.querySelector('h3').
+        innerText;
         playerList = document.querySelectorAll('.playerName');
+        console.log(playerList);
         playerList.forEach(function(playerName) {
           if (playerName.innerText !== player) {
 
