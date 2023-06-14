@@ -430,6 +430,7 @@ input:focus {
     }
     .player1, .player2, .player3 {
         flex-direction: column;
+        gap: 1svh;
         justify-content: center;
     }
     .plus-five-button {
@@ -454,16 +455,16 @@ input:focus {
         margin-bottom: 10px;
     }
     h1 {
-        font-size: 1.6rem;
+        font-size: 2rem;
     }    
     h2 {
         font-size: 1.2rem;
     }    
     h3 {
-        font-size: 1.6rem;
+        font-size: 2rem;
     }    
     h4 {
-        font-size: 0.8rem;
+        font-size: 1rem;
     }
 }
 
