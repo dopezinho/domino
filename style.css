@@ -437,6 +437,9 @@ input:focus {
         height: 78svh;
         justify-content: space-between;
     }
+    .playersInput3Selected {
+        margin-bottom: 2svh;
+    }
     .playersInput3Selected svg {
         height: 220px;
     }
