@@ -434,12 +434,16 @@ input:focus {
         align-items: center;
         flex-direction: column;
         gap: 2svh;
-        height: 76svh;
+        height: 78svh;
         justify-content: space-around;
+        margin: 2svh;
     }
     .playersInput3Selected svg {
         height: 220px;
     }
+    .playersInput3Name {
+        width: 100%;
+    }    
     .playersInput3Name h3 {
         height: 60px;
         margin-left: 5px;
@@ -451,7 +455,7 @@ input:focus {
         height: 60px;
         padding-left: 5px;
         margin: 2svh 0;
-        width: 60%;
+        width: 80%;
     }
     .playersTemplate {
         gap: 0.5svh;
