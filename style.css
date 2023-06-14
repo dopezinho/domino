@@ -436,6 +436,7 @@ input:focus {
         gap: 2svh;
         height: 78svh;
         justify-content: space-between;
+        margin: 0 2svh;
     }
     .playersInput3Selected {
         margin-bottom: 2svh;
