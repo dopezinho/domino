@@ -421,6 +421,7 @@ input:focus {
     }
     .message-gap {
         height: 6svh;
+        text-align: center;
     }
     .playersSelect {
         gap: 1svh;
