@@ -422,11 +422,11 @@ input:focus {
         height: 6svh;
     }
     .playersTemplate {
-        gap: 1svh;
+        gap: 0.5svh;
         height: 80svh;
     }
     .domino svg {
-        height: 200px;
+        height: 220px;
     }
     .player1, .player2, .player3 {
         flex-direction: column;
@@ -443,8 +443,8 @@ input:focus {
         width: 90px;
     }
     .player-info button {
-        height: 80px;
-        width: 40px;
+        height: 120px;
+        width: 60px;
     }
     .player-info button:nth-child(2) {
         margin-top: 10px;
