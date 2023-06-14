@@ -434,9 +434,8 @@ input:focus {
         align-items: center;
         flex-direction: column;
         gap: 2svh;
-        height: 76svh;
+        height: 78svh;
         justify-content: space-around;
-        padding: 2svh;
     }
     .playersInput3Selected svg {
         height: 220px;
