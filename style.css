@@ -431,20 +431,22 @@ input:focus {
         height: 220px;
     }
     .playersInput3 {
+        align-items: center;
+        flex-direction: column;
         height: 76svh;
+        justify-content: space-around;
     }
     .playersInput3Selected svg {
         height: 220px;
     }
     .playersInput3Name h3 {
-        height: 90px;
+        height: 60px;
         margin-left: 5px;
-        width: 90px;
-    }
-    
+        width: 60px;
+    }    
     .playersInput3Name input {
         font-size: 2rem;
-        height: 90px;
+        height: 60px;
         padding-left: 5px;
         width: 60%;
     }
