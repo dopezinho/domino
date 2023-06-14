@@ -415,7 +415,8 @@ input:focus {
 @media only screen and (max-width: 700px) {
     header {
         height: 14svh;
-    }.head-text {
+    }
+    .head-text {
         margin-left: 2svh;
     }
     .message-gap {
@@ -427,6 +428,24 @@ input:focus {
     }
     .playersSelect svg {
         height: 220px;
+    }
+    .playersInput3 {
+        height: 76svh;
+    }
+    .playersInput3Selected svg {
+        height: 220px;
+    }
+    .playersInput3Name h3 {
+        height: 90px;
+        margin-left: 5px;
+        width: 90px;
+    }
+    
+    .playersInput3Name input {
+        font-size: 2rem;
+        height: 90px;
+        padding-left: 5px;
+        width: 60%;
     }
     .playersTemplate {
         gap: 0.5svh;
