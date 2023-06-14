@@ -459,6 +459,7 @@ input:focus {
     }    
     h2 {
         font-size: 1.2rem;
+        padding: 2svh;
     }    
     h3 {
         font-size: 2rem;
