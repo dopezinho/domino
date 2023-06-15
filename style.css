@@ -400,6 +400,20 @@ input:focus {
         height: 100px;
         width: 50px;
     }
+    .plus-five-button {
+        background-color: transparent;
+        height: 120px;
+        left: 0;
+        top: 0;
+        width: 120px;
+    }    
+    .minus-five-button {
+        background-color: transparent;
+        height: 120px;
+        left: 0;
+        top: 50%;
+        width: 120px;
+    }
 }
 
 @media only screen and (max-width: 1000px) {
@@ -409,6 +423,20 @@ input:focus {
     .player-info button {
         height: 80px;
         width: 40px;
+    }
+    .plus-five-button {
+        background-color: transparent;
+        height: 90px;
+        left: 0;
+        top: 0;
+        width: 90px;
+    }    
+    .minus-five-button {
+        background-color: transparent;
+        height: 90px;
+        left: 0;
+        top: 50%;
+        width: 90px;
     }
 }
 
@@ -473,14 +501,16 @@ input:focus {
         justify-content: center;
     }
     .plus-five-button {
-        height: 90px;
+        height: 110px;
         left: 0;
-        width: 90px;
+        top: 0;
+        width: 110px;
     }    
     .minus-five-button {
-        height: 90px;
+        height: 110px;
         left: 0;
-        width: 90px;
+        top: 50%;
+        width: 110px;
     }
     .player-info button {
         height: 120px;
