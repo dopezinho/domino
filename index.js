@@ -2,6 +2,11 @@
               Winner:0,
               Day:0};
 
+  
+
+
+
+
   //Plus and Minus five buttons
   const plusFiveRect1 = document.getElementById('plus-five-rect1')
   const minusFiveRect1 = document.getElementById('minus-five-rect1')
@@ -9,10 +14,12 @@
   const minusFiveRect2 = document.getElementById('minus-five-rect2')
   const plusFiveRect3 = document.getElementById('plus-five-rect3')
   const minusFiveRect3 = document.getElementById('minus-five-rect3')
+  
+
 
   //Functions to keep track off points by buttons
   function add5(element) {
-    const player = element.parentNode.parentNode.parentNode;
+    const player = element.parentNode.parentNode;
     const ticks = Array.from(player.querySelectorAll('path')).slice(2);
     const circles = Array.from(player.querySelectorAll('circle')).splice(1);
     const playerPoints = player.querySelector('.playerPoints');
@@ -21,7 +28,7 @@
   }
 
   function add10(element) {
-    const player = element.parentNode.parentNode.parentNode;
+    const player = element.parentNode.parentNode;
     const ticks = Array.from(player.querySelectorAll('path')).slice(2);
     const circles = Array.from(player.querySelectorAll('circle')).splice(1);
     const playerPoints = player.querySelector('.playerPoints');
@@ -30,7 +37,7 @@
   }
 
   function add20(element) {
-    const player = element.parentNode.parentNode.parentNode;
+    const player = element.parentNode.parentNode;
     const ticks = Array.from(player.querySelectorAll('path')).slice(2);
     const circles = Array.from(player.querySelectorAll('circle')).splice(1);
     const playerPoints = player.querySelector('.playerPoints');
@@ -39,7 +46,7 @@
   }
 
   function minus5(element) {
-    const player = element.parentNode.parentNode.parentNode;
+    const player = element.parentNode.parentNode;
     const ticks = Array.from(player.querySelectorAll('path')).slice(2);
     const circles = Array.from(player.querySelectorAll('circle')).splice(1);
     const playerPoints = player.querySelector('.playerPoints');
@@ -48,7 +55,7 @@
   }
 
   function galada(element) {
-    const player = element.parentNode;
+    const player = element.parentNode.parentNode;
     const ticks = Array.from(player.querySelectorAll('path')).slice(2);
     const circles = Array.from(player.querySelectorAll('circle')).splice(1);
     const playerPoints = player.querySelector('.playerPoints');
@@ -57,7 +64,7 @@
   }
 
   function passar(element) {
-    const player = element.parentNode;
+    const player = element.parentNode.parentNode;
     const ticks = Array.from(player.querySelectorAll('path')).slice(2);
     const circles = Array.from(player.querySelectorAll('circle')).splice(1);
     const playerPoints = player.querySelector('.playerPoints');
@@ -66,7 +73,7 @@
   }
 
   function carrao(element, ncarrao) {
-    const player = element.parentNode;
+    const player = element.parentNode.parentNode;
     const ticks = Array.from(player.querySelectorAll('path')).slice(2);
     const circles = Array.from(player.querySelectorAll('circle')).splice(1);
     const playerPoints = player.querySelector('.playerPoints');
@@ -179,15 +186,13 @@
         
       break;
       case 'PASSOU':
-        player = element.parentNode.parentNode.querySelector('h3').innerText;
+        player = element.parentNode.parentNode.querySelector('h3').
+        innerText;
         playerList = document.querySelectorAll('.playerName');
         playerList.forEach(function(playerName) {
-          if (playerName.innerText !== player) {
-
-            (function(currentPlayer) {
-              passar(currentPlayer);
-            })(playerName);
-          }
+          if (playerName.innerText !== player)  {
+              passar(playerName);
+          } 
           else {
             const passou = playerName.dataset.passou || 0;
             playerName.dataset.passou = parseInt(passou) + 1;
@@ -302,8 +307,8 @@
         Passou: player.dataset.passou,
         Fechou: player.dataset.fechou
       }
+      console.log(data);
     });
-
     for (const player in data.Players) {
       const points = data.Players[player][rodadaKey].Pontos;
       if (points >= 200) {
@@ -313,3 +318,79 @@
     }
   }
 
+  /* Mutable Screens */
+
+  function changeScreen1() {
+    const playersSelect = document.getElementById('playersSelect')
+    const playersInput3 = document.getElementById('playersInput3')
+    const messageGapH2 = document.getElementById('messageGapH2')
+    playersSelect.style.display = 'none'
+    playersInput3.style.display = 'flex'
+    messageGapH2.innerHTML = 'Digite o nome dos jogadores e clique no dominó para continuar'
+  }
+
+  function changeScreen2() {
+    const playersInput3 = document.getElementById('playersInput3')
+    const playersTemplate = document.getElementById('playersTemplate')
+    const messageGapH2 = document.getElementById('messageGapH2')
+    playersInput3.style.display = 'none'
+    playersTemplate.style.display = 'flex'
+    messageGapH2.innerHTML = "auiiiiii let's play"
+  }
+
+  /* header:hover */
+  
+/* fezinho's code
+  const header = document.getElementById('header')
+  const select2 = document.getElementById('select2')
+  const select3 = document.getElementById('select3')
+  const select4 = document.getElementById('select4')
+  const inputHover = document.getElementById('inputHover')
+  const inputSelected3 = document.getElementById('inputSelected3')
+  const player1 = document.getElementById('p1')
+  const player2 = document.getElementById('p2')
+  const player3 = document.getElementById('p3')
+
+
+  header.addEventListener('mouseenter', () => select2.style.backgroundColor = 'transparent')
+  header.addEventListener('mouseleave', () => select2.style.backgroundColor = '#232323f2')
+
+  header.addEventListener('mouseenter', () => select3.style.backgroundColor = 'transparent')
+  header.addEventListener('mouseleave', () => select3.style.backgroundColor = '#232323f2')
+
+  header.addEventListener('mouseenter', () => select4.style.backgroundColor = 'transparent')
+  header.addEventListener('mouseleave', () => select4.style.backgroundColor = '#232323f2')
+
+  header.addEventListener('mouseenter', () => inputHover.style.backgroundColor = 'transparent')
+  header.addEventListener('mouseleave', () => inputHover.style.backgroundColor = '#232323f2')
+
+  header.addEventListener('mouseenter', () => inputSelected3.style.backgroundColor = 'transparent')
+  header.addEventListener('mouseleave', () => inputSelected3.style.backgroundColor = '#232323f2')
+
+  header.addEventListener('mouseenter', () => player1.style.backgroundColor = 'transparent')
+  header.addEventListener('mouseleave', () => player1.style.backgroundColor = '#232323f2')
+
+  header.addEventListener('mouseenter', () => player2.style.backgroundColor = 'transparent')
+  header.addEventListener('mouseleave', () => player2.style.backgroundColor = '#232323f2')
+
+  header.addEventListener('mouseenter', () => player.style.backgroundColor = 'transparent')
+  header.addEventListener('mouseleave', () => player.style.backgroundColor = '#232323f2')
+   */
+
+  /* chat gpt code */
+  
+const elements = ['select2', 'select3', 'select4', 'inputHover', 'inputSelected3', 'p1', 'p2', 'p3', 'j1', 'j2', 'j3'];
+
+elements.forEach((elementId) => {
+  const element = document.getElementById(elementId);
+  header.addEventListener('mouseenter', () => element.style.backgroundColor = 'transparent');
+  header.addEventListener('mouseleave', () => element.style.backgroundColor = 'var(--bg-color)');
+});
+/* change bg */
+
+const maua = document.getElementById('maua')
+const body = document.getElementById('body')
+
+function changeBg() {
+  body.style.backgroundImage = 'url(./src/bege5.png)'
+}
