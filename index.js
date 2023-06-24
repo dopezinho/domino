@@ -2,11 +2,6 @@
               Winner:0,
               Day:0};
 
-  
-
-
-
-
   //Plus and Minus five buttons
   const plusFiveRect1 = document.getElementById('plus-five-rect1')
   const minusFiveRect1 = document.getElementById('minus-five-rect1')
@@ -14,8 +9,6 @@
   const minusFiveRect2 = document.getElementById('minus-five-rect2')
   const plusFiveRect3 = document.getElementById('plus-five-rect3')
   const minusFiveRect3 = document.getElementById('minus-five-rect3')
-  
-
 
   //Functions to keep track off points by buttons
   function add5(element) {
@@ -81,9 +74,7 @@
     showPoints(ticks, circles, playerPoints);
   }
 
-
-
-  //Function to show the ticks
+  // Function to show the ticks
   function showPoints(ticks, circles, playerPoints) {
     let numCircles = 0;
     if (playerPoints.value <= 400 && playerPoints.value >= 0){
@@ -104,6 +95,33 @@
     playerPoints.innerText = playerPoints.value;
   }
 
+  // Function to restart all ticks
+  function deleteTicks() {
+    const ticks = document.querySelectorAll('path');
+    ticks.forEach(function(tick) {
+      tick.classList.remove('ticked')});
+    const circles = document.querySelectorAll('circle');
+    circles.forEach(function(circle) {
+      circle.classList.remove('ticked')});
+  }
+
+  function resetGame(players) {
+    const playerPoints = document.querySelectorAll('.playerPoints');
+    playerPoints.forEach(function(player) {
+      player.value = 0;
+      player.innerHTML = '0';
+    });
+    deleteTicks()
+    players.forEach(function(player){
+      player.dataset.nCarrao = 0
+      player.dataset.galouCount = 0
+      player.dataset.baixou = 0
+      player.dataset.comecou = 0
+      player.dataset.bateu = 0
+      player.dataset.passou = 0
+      player.dataset.fecho = 0
+    })
+  }
 
   // Function to show the options modal. the Onclick is on the HTML playerName
   function showPlayerOptions(element) {
@@ -163,11 +181,12 @@
           playerName.dataset.passou = 0;
           playerName.dataset.baixou = 0;
           playerName.dataset.fechou = 0;
+          playerName.dataset.comecou = 0;
         });
         playerList.forEach(function(playerName) {
           if (playerName.innerText === player) {
-            const bateu = playerName.dataset.bateu || 0;
-            playerName.dataset.bateu = parseInt(bateu) + 1;
+            const comecou = playerName.dataset.comecou || 0;
+            playerName.dataset.comecou = parseInt(comecou) + 1;
           }
         });
       break;
@@ -233,9 +252,11 @@
           playerName.dataset.nCarrao = 0;
           playerName.dataset.galouCount = 0; 
           playerName.dataset.passou = 0;
+          playerName.dataset.comecou = 0;
           playerName.dataset.baixou = 0;
           playerName.dataset.fechou = 0;
         });
+        startModal = document.querySelector('#starterModal').style.display = 'block';
       break;
       case '4':
         ncarrao = element.value;
@@ -302,20 +323,34 @@
         [carrao]: player.dataset.nCarrao,
         Galadas: player.dataset.galouCount,
         Baixou: player.dataset.baixou,
-        Começou: 0,
+        Começou: player.dataset.comecou,
         Bateu: player.dataset.bateu,
         Passou: player.dataset.passou,
         Fechou: player.dataset.fechou
       }
-      console.log(data);
     });
-    for (const player in data.Players) {
-      const points = data.Players[player][rodadaKey].Pontos;
-      if (points >= 200) {
-        /////////Oq deve acontecer quando alguem ganha
-       window.alert(`Vencedor: ${player}`) 
+    console.log(data);
+    points.forEach(function(point) {
+      if (point.value >= 200) {
+        const player = point.previousElementSibling.previousElementSibling.previousElementSibling.innerHTML
+        resetGame(players)
+        data = {Players:{},
+                Winner:0,
+                Day:0};
+        rodadaN = 0;
+        window.alert(`Vencedor: ${player}`) 
       }
-    }
+    })
+    // for (const player in data.Players) {
+    //   if (points.value >= 200) {
+    //     resetGame(players)
+    //     data = {Players:{},
+    //             Winner:0,
+    //             Day:0};
+    //     rodadaN = 0;
+    //    window.alert(`Vencedor: ${player}`) 
+    //   }
+    // }
   }
 
   /* Mutable Screens */
@@ -330,12 +365,18 @@
   }
 
   function changeScreen2() {
-    const playersInput3 = document.getElementById('playersInput3')
-    const playersTemplate = document.getElementById('playersTemplate')
-    const messageGapH2 = document.getElementById('messageGapH2')
-    playersInput3.style.display = 'none'
-    playersTemplate.style.display = 'flex'
-    messageGapH2.innerHTML = "auiiiiii let's play"
+    const playersInput3 = document.getElementById('playersInput3');
+    const playersTemplate = document.getElementById('playersTemplate');
+    const messageGapH2 = document.getElementById('messageGapH2');
+    playersInput3.style.display = 'none';
+    playersTemplate.style.display = 'flex';
+    messageGapH2.innerHTML = "auiiiiii let's play";
+    const playerNamesInputs = document.querySelectorAll('.playerInput');
+    const players = document.querySelectorAll('.playerName');
+    playerNamesInputs.forEach(function(player, index) {
+      players[index].innerText = player.value;
+    })
+    createModal(3);
   }
 
   /* header:hover */
@@ -393,4 +434,67 @@ const body = document.getElementById('body')
 
 function changeBg() {
   body.style.backgroundImage = 'url(./src/bege5.png)'
+}
+
+
+
+
+
+
+//create the Startedrs modal
+function createModal(numPlayers) {
+  // Create the main div and set its properties
+  let modalDiv = document.createElement('div');
+  modalDiv.id = 'starterModal';
+  modalDiv.className = 'modal';
+  
+  // Create the modal-content div
+  let contentDiv = document.createElement('div');
+  contentDiv.className = 'modal-content';
+
+  // Create the heading
+  let heading = document.createElement('h3');
+  heading.id = 'startedModalHeading';
+
+  // Create the ul and the li elements
+  let ulElement = document.createElement('ul');
+  ulElement.className = 'modalOptions';
+
+  // Get player Names
+  const playerNames = document.querySelectorAll('.playerInput')
+
+  // Add list items
+  for (let i = 1; i <= numPlayers; i++) {
+      const name = playerNames[i - 1].value;
+      let liElement = document.createElement('li');
+      liElement.textContent = name;
+      liElement.onclick = function() {
+        chooseStarter(this);
+      };
+      ulElement.appendChild(liElement);
+  }
+
+  // Append all the elements to the content div
+  contentDiv.appendChild(heading);
+  contentDiv.appendChild(ulElement);
+
+  // Append the content div to the main div
+  modalDiv.appendChild(contentDiv);
+
+  // Append the main div to the body of the document
+  document.body.appendChild(modalDiv);
+  modalDiv.style.display = 'block'
+}
+
+// Adiciona nos datasets quem começou
+function chooseStarter(element) {
+  playerList = document.querySelectorAll('.playerName');
+  playerList.forEach(function(playerName) {
+    if (playerName.innerText.toLowerCase() === element.innerText.toLowerCase()) {
+      const comecou = playerName.dataset.comecou || 0;
+      playerName.dataset.comecou = parseInt(comecou) + 1;
+    }
+  });      
+  var modal = document.getElementById("starterModal");
+  modal.style.display = "none";
 }
