@@ -436,11 +436,6 @@ function changeBg() {
   body.style.backgroundImage = 'url(./src/bege5.png)'
 }
 
-
-
-
-
-
 //create the Startedrs modal
 function createModal(numPlayers) {
   // Create the main div and set its properties
