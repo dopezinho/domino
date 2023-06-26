@@ -105,6 +105,7 @@
       circle.classList.remove('ticked')});
   }
 
+  // Reset all ticks
   function resetGame(players) {
     const playerPoints = document.querySelectorAll('.playerPoints');
     playerPoints.forEach(function(player) {
