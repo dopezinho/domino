@@ -494,3 +494,5 @@ function chooseStarter(element) {
   var modal = document.getElementById("starterModal");
   modal.style.display = "none";
 }
+
+const nome = 'henrique'
