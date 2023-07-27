@@ -451,6 +451,7 @@ function createModal(numPlayers) {
   // Create the heading
   let heading = document.createElement('h3');
   heading.id = 'startedModalHeading';
+  heading.innerHTML = "Quem começou?"
 
   // Create the ul and the li elements
   let ulElement = document.createElement('ul');
